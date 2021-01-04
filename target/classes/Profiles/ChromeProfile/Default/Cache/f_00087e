@@ -1,0 +1,1710 @@
+@font-face {
+		font-family: segoeuisemibold;
+		src: url(seguisb.eot);
+	}
+	@font-face {
+		font-family: segoeuiregular;
+		src: url(SegoeUIRegular.eot);
+	}
+@font-face {
+		font-family: segoeuiregular;
+		src: url(segoeui.ttf);
+	}
+	@font-face {
+		font-family: segoeuisemibold;
+		src: url(Segoesemibold.ttf);
+	}
+	img.img_captcha {
+	pointer-events: none;
+	}
+	#errmsg
+{color: red;float: right;font-size: 17px;margin: 0px 0px 0px -93px;}
+.captcha_class {
+    width: 100%;
+        height: 100%;
+}
+@media only screen  and (max-width: 319px) {
+	.preview_container{
+	display: none;
+	}
+	.potra_message{
+	display: block;
+	}
+	.message{
+	display: block;
+	    color: red;
+    text-align: center;
+	}
+	.preview{
+	display: flex;
+	}
+	  .rllogo{
+        height: 15vh;
+        float: left;
+        display: flex;
+        flex-shrink: 1;
+    }
+    .rlogo
+    {
+        margin: 20px 32px 10px 32px;
+        cursor: pointer;
+        width: 80%;
+    }
+}
+@media only screen  and (min-width: 320px)  and (max-width: 479px) {
+	
+/* CR_28891 Added by shridev start */
+	/* img#refresh_captcha {
+    height: 5vh;
+    width: 5vw;
+} */ 
+img#refresh_captcha {
+    margin: -4.8vh 9vw 0% 0%;
+    height: 3.8vh;
+    float: right;
+    cursor: pointer;
+    width: 4.4vw !important;
+}
+/* CR_28891 Added by shridev end */
+
+	.line1 {
+    width: 22vw;
+    height: 40vh;
+    -webkit-transform: translateY(-30px)          translateX(5px)          rotate(40deg);
+    /* background-color: #f7f1f1; */
+    position: fixed;
+    top: 32vh;
+    z-index: 1;
+    right: 12vw;
+    /* border: 1px solid #f4af35; */
+    /* border-radius: 30px; */
+}
+	/* Styling the login section */
+	html {
+		overflow: hidden;
+	}
+	
+/* CR_28891 Added by shridev start */
+	/* img.img_captcha {
+    margin: 0% 0% 0% 1%;
+    width: 27%;
+    height: 5vh;
+} */ 
+
+img.img_captcha {
+    margin: 2% 0% 0% 8%;
+    width: 12vw !important;
+    height: 3.8vh;
+}
+
+.captcha_class input {
+    width: 10vw;
+    float: right;
+    height: 3vh;
+    margin: 0.6vh 14vw 0vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+}
+
+/* .id_input_cap input {
+    flex-wrap: nowrap;
+    float: left;
+    width: 38.7%;
+    resize: auto;
+    height: 4vh;
+    text-align: LEFT;
+    color: #000000;
+    font-family: segoeuiregular;
+    margin: 0px 0vw 0vh 9%;
+    padding: 0.5vh 0px 0px 3%;
+    font-size: 1.1vw;
+} */
+/* CR_28891 Added by shridev end */
+
+	body {
+		background-color: #9198a3;
+	}
+	.header {
+		background-color: #0b419a;
+		width: 89.4%;
+		height: 17.3vh;
+		top: 0vh;
+		left: 5.02vw;
+		position: absolute;
+		float: left;
+		display: flex;
+		display:-webkit-flex;
+		z-index: 3;
+	}
+	.logo {
+		height: 16vh;
+		float: left;
+		width: 60vw;
+	}
+	.blogo {
+		width: 76%;
+		margin: 5vh 0px 28px 0px;
+	}
+	.quicklink {
+		color: aliceblue;
+		width: 50%;
+		height: 3vh;
+		float: none;
+		text-align: right;
+		font-size: 15px;
+		margin: 5% 5px 0px 0%;
+		font-family: segoeuiregular;
+	}
+	
+#hindi
+	{
+	text-decoration:none;
+	color: aliceblue;
+	text-align: right;
+	float: right;
+	}
+	#keyBoardDiv {
+    position: relative;
+    margin: 7vh 0vw 0vh 0vw;
+    z-index: 16050;
+    right: 29vw;
+}
+.login_button_contuserid {
+		float: left;
+		height: auto;
+		width: 77%;
+	}
+.button_textuserid {
+		float: left;
+		color: #555555;
+		font-size: 1.4vw;
+		font-family: segoeuisemibold;
+		margin: 20px 0px 0px 5%;
+	}
+.userid_frgt {
+		height: 4vh;
+		color: #000000;
+		font-size: 10px;
+		font-family: segoeuisemibold;
+		margin: 0vh 1vw 0.5vh 0vw;
+		float: right;
+		cursor: pointer;
+		display: flex;
+		left: 0vw;
+	}
+	.log_about {
+		width: 5vw;
+		float: left;
+	}
+	.log_careers {
+		width: 100%;
+		float: left;
+		text-decoration: none;
+		text-align: left;
+		color: aliceblue;
+	}
+	.log_find {
+		width: auto;
+		float: left;
+		margin: 0px 10px 0px 0px;
+	}
+	.login_divider{
+		margin: 0px 0px 0px 0px;
+		float: left;
+	}
+	.login1_divider {
+		margin: 5px 9px 0px 9px;
+		float: left;
+	}
+	.login_bar {
+		background-color: #ffffff;
+		width: 89.4%;
+		height: 6vh;
+		position: absolute;
+		top: 16.8vh;
+		left: 5.02vw;
+		border-bottom: 1px solid #d9d9d9;
+		float: left;
+		display: flex;
+		z-index: 2;
+	}
+	.my_login {
+		float: left;
+		width: 8.5%;
+		height: 6.1vh;
+	}
+	.my_login a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 20px;
+	}
+	.my_login1 {
+		float: left;
+		width: 10.5%;
+		height: 6.1vh;
+	}
+	.my_login1 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 26px;
+	}
+	.my_login2 {
+		float: left;
+		width: 6.5%;
+		height: 6.1vh;
+	}
+	.my_login2 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 20px;
+	}
+	.my_login3 {
+		float: left;
+		width: 9.5%;
+		height: 6.1vh;
+	}
+	.my_login3 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 24px;
+	}
+	.my_login4 {
+		float: left;
+		width: 7.5%;
+		height: 6.1vh;
+	}
+	.my_login4 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 20px;
+	}
+	.my_login5 {
+		float: left;
+		width: 10%;
+		height: 6.1vh;
+	}
+	.my_login5 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 32px;
+	}
+	.login_container {
+	float: left;
+	top: 22.9vh;
+	position: absolute;
+	left: 5.02vw;
+	height: 51vh;
+	display: flex;
+	width: 89.4%;
+	}
+	.login_content {
+		float: left;
+		display: flex;
+		/* flex-grow: initial; */
+		height: 50.6vh;
+		width: 100%;
+		z-index: -1;
+	}
+	.arrow_cont {
+		width: 53%;
+		height: 40px;
+		margin: 15% 0px 0px 1.5vw;
+		position: fixed;
+		-ms-transform: translate(-167%, -50%);
+	}
+	.login_cont {
+		width: 47%;
+		height: auto;
+		margin: 0px 0px 0px 0%;
+		position: absolute;
+		border: 1px solid #facd58;
+		opacity: 1;
+		z-index: 2;
+		background-color: transparent;
+		right: 1vw;
+		top: 5vh;
+		filter: alpha(opacity=60);
+		border-radius: 50px;
+	}
+	.login_text {
+		height: auto;
+		color: #000000;
+		width: 91%;
+		font-size: 2.5vh;
+		text-align: center;
+		font-family: segoeuisemibold;
+		margin: 5px 0px 0px 0vw;
+	}
+	.login_radio {
+		height: 35px;
+		margin: 30px 0px 0px 0px;
+	}
+	.l_login_radio {
+		height: 4vh;
+		margin: 1vh 0px 0px 5%;
+		width: auto;
+	}
+	.radio_ind_cont {
+		float: left;
+		height: 20px;
+		width: auto;
+		margin: 0vh 1vw 0vh 0vw;
+	}
+	.radio_login {
+		float: left;
+		margin: 0px 0px 0px 0px;
+		cursor: pointer;
+	}
+	#radio_login1,#radio_login2,.radio_login1,.radio_login2 {
+		float: left;
+		margin: 8px 0px 0px 2px;
+		cursor: pointer;
+	}
+	.radio_corp_cont {
+		float: left;
+		height: 19px;
+		width: auto;
+	}
+	.radio_d_enable {
+		float: left;
+		color: #000000;
+		font-size: 9px;
+		font-family: segoeuiregular;
+		margin: 3px 0px 0px 1px;
+	}
+	.userid_cont {
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+	.l_userid_cont {
+		float: left;
+		height: auto;
+		width: auto;
+	}
+	.userid_text {
+		color: #555555;
+		font-size: 10px;
+		font-family: segoeuiregular;
+		float: left;
+		height: auto;
+		width: 95%;
+		margin: 2vh 0px 0vh 5%;
+	}
+	.l_userid_text {
+		color: #000000;
+		font-size: 10px;
+		font-family: segoeuiregular;
+		float: left;
+		height: auto;
+		width: auto;
+		margin: 1vh 0px 1vh 3vw;
+	}
+	.login_button_cont {
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+	.id_input input {
+		flex-wrap: nowrap;
+		display: block;
+		float: left;
+		width: 33vw;
+		height: 2vh;
+		text-align: LEFT;
+		color: #000000;
+		font-family: segoeuiregular;
+		margin: 0px 0vw 0vh 9%;
+		padding: 0.5vh 0px 0px 3%;
+		font-size: 9px;
+	}
+	.id_input1 input {
+		flex-wrap: nowrap;
+		display: block;
+		float: left;
+		width: 20vw;
+		height: 2vh;
+		text-align: LEFT;
+		color: #000000;
+		font-family: segoeuiregular;
+		margin: 0px 0vw 0vh 9%;
+		padding: 0.5vh 0px 0px 3%;
+		font-size: 9px;
+	}
+	.login_button {
+		background-color: #555555;
+		float: left;
+		color: #facd58;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.05vw;
+		cursor: pointer;
+		width: 128px;
+		height: 2.1vh;
+		margin: 1vh 0vw 0vh 26px;
+		padding: 1vh 0vw 1.9vh 0vw;
+		font-family: segoe ui;
+		font-weight: bold;
+		border-radius: 3px;
+	}
+	.l_login_button {
+		background-color: #555555;
+		float: left;
+		color: #facd58;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 11px;
+		cursor: pointer;
+		width: 14vw;
+		height: 20px;
+		margin: 1.5vh 0vw 1vh 4vw;
+		padding: 1vh 0vw 0vh 0vw;
+		font-family: segoeuisemibold;
+		border-radius: 3px;
+	}
+	.l_register_button {
+		background-color: #dee1e2b3;
+		float: left;
+		color: #000000;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 11px;
+		cursor: pointer;
+		width: 18vw;
+		height: 20px;
+		margin: 1.5vh 0vw 0vh 5px;
+		padding: 1vh 0vw 0vh 0vw;
+		font-family: segoeuisemibold;
+		border-radius: 3px;
+	}
+	.button_text {
+		float: left;
+		color: #555555;
+		cursor: pointer;
+		font-size: 1.2vw;
+		font-family: segoeuisemibold;
+		margin: 20px 0px 0px 54px;
+	}
+	.login_security {
+		display: flex;
+		float: left;
+		margin: 0px 0px 0px 0%;
+		background-color: #f7f1f1;
+		width: 89.4%;
+		top: 73.5vh;
+		position: absolute;
+		left: 5.02vw;
+		height: calc(77vh - 131px - 24px);
+	}
+	.left_arrow {
+		float: left;
+		position: absolute;
+		cursor: pointer;
+	}
+	.right_arrow {
+		margin: 0px 0px 0px 49vw;
+		position: absolute;
+		cursor: pointer;
+	}
+	.radio_series_cont {
+		width: 100px;
+		height: 50px;
+		margin: 335px 0px 0px 45.5vw;
+		position: absolute;
+	}
+	.norton_head {
+		color: #000;
+		font-family: segoeuisemibold;
+		font-size: 2vw;
+	}
+	.norton_body {
+		color: #000;
+		font-family: segoeuiregular;
+		font-size: 7px;
+	}
+	.norton_sec1 {
+		float: left;
+		margin: 5vh 0px 0px 1%;
+		width: 33%;
+		height: 14vh;
+	}
+	.norton_sec2 {
+		float: left;
+		margin: 1vh 0px 0px 4px;
+		width: 36.5%;
+		height: 15vh;
+		font-family: segoeuiregular;
+	}
+	.norton_sec3 {
+		float: left;
+		margin: 15px 0px 0px 10px;
+		width: 27%;
+		height: 13vh;
+	}
+	/* Styling the login disclaimer section */
+	.disclaimer_container {
+		float: left;
+		margin: 114px 0px 0px 61px;
+		position: relative;
+		width: 89.4vw;
+		background-color: #dee1e2;
+		height: 78.7vh;
+	}
+	.disclaimer_text {
+		float: left;
+		margin: 25px 0px 0px 34px;
+		width: 84.6vw;
+		background-color: #ffffff;
+		height: 61vh;
+	}
+	.dis_sum_head {
+		color: #000000;
+		font-size: 12px;
+		font-family: segoeuiregular;
+		margin: 10px 0vw 0vh 2.3vw;
+		float: left;
+		width: auto;
+	}
+	.disclaimer_image {
+		float: left;
+		width: 21vw;
+		height: 34vh;
+	}
+	.dis_image {
+		float: left;
+		margin: 0px 0px 0px 45px;
+	}
+	.dis_bulet {
+		float: left;
+		margin: 0px 0% 0px 1%;
+	}
+	.dis_bulet a {
+		text-decoration: none;
+	}
+	.disclaimer_decl {
+		float: left;
+		margin: 1vh 0vw 0vh 5px;
+		width: 97%;
+		font-size: 8px;
+		font-family: segoeuisemibold;
+		line-height: 9px;
+	}
+	.disc_sign {
+		text-align: left;
+		font-size: 14px;
+		float: right;
+		height: 7vh;
+		width: 13vw;
+		font-family: segoeuiregular;
+		margin: 0px 0px 0px 0px;
+		color: #8f8f8f;
+	}
+	.disc_iagree {
+		margin: 42px 0px 0px 37vw;
+		text-align: center;
+		cursor: pointer;
+	}
+	/* Styling the password screen section */
+	.pwd_container {
+		float: left;
+		margin: 0% 0px 0px 0vw;
+		background-color: #afc8d2;
+		display: flex;
+		width: 89.4%;
+		top: 16.9vh;
+		position: absolute;
+		left: 5.02vw;
+	}
+	.pwd_content {
+		float: left;
+		height: 63vh;
+		width: 100%;
+	}
+	.pwd_cont {
+		width: 28%;
+		height: auto;
+		margin: 6vh 0px 0px 63vw;
+		position: absolute;
+		background-color: #e2f6ff;
+	}
+	.pwd_quicklink {
+		color: aliceblue;
+		float: right;
+		height: auto;
+		margin: 4vh 0px 0px 0%;
+		font-family: segoeuiregular;
+		font-size: 7px;
+	}
+	.pwd_welcome {
+		width: 100%;
+		float: left;
+	}
+	.pwd_msg {
+		width: auto;
+		float: left;
+	}
+	.pwd_inp {
+		width: auto;
+		float: left;
+	}
+	.pwd_text1 {
+		height: auto;
+		color: #000;
+		font-size: 10px;
+		font-family: segoeuiregular;
+		margin: 5% 0px 0px 0%;
+		width: 47%;
+		float: left;
+	}
+	.pwd_text2 {
+		height: auto;
+		float: left;
+		color: #000;
+		font-size: 8px;
+		font-family: segoeuiregular;
+		margin: 7% 0px 0px 3%;
+	}
+	.pass_cont {
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+	.pass_text {
+		color: #555555;
+		font-size: 10px;
+		font-family: segoeuiregular;
+		float: left;
+		height: auto;
+		width: 95%;
+		margin: 0.5vh 0px 2% 5%;
+	}
+	.pass_input input {
+		display: block;
+		margin: 0vh 0vw 0vh 2%;
+		width: 53%;
+		height: 3vh;
+		padding: 0px 0px 0px 5%;
+		color: #444444;
+		flex-wrap: nowrap; */
+		display: block;
+		float: left;
+		resize: auto;
+		text-align: LEFT;
+		font-family: segoeuiregular;
+		font-size: 1.1vw;
+	}
+	.vkeyboard {
+		float: left;
+		margin: 0px 2% 0px 5%;
+		cursor: pointer;
+		width: 25%;
+	}
+	.pass_button {
+		background-color: #555555;
+		float: left;
+		color: #facd58;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 8px;
+		cursor: pointer;
+		width: 35%;
+		height: 14px;
+		margin: 1vh 0vw 0vh 0%;
+		padding: 1vh 0vw 1vh 0vw;
+		font-family: segoeuisemibold;
+		border-radius: 3px;
+	}
+	.pwd_frgt {
+		height: auto;
+		color: #000;
+		font-size: 6.3px;
+		font-family: segoeuiregular;
+		margin: 2vh 0px 0px 3%;
+		float: left;
+		cursor: pointer;
+	}
+	.pwd_security {
+		display: flex;
+		float: left;
+		margin: 0px 0px 0px 0vw;
+		background-color: #f7f1f1;
+		width: 89.4%;
+		top: 79.9vh;
+		z-index: -1;
+		position: fixed;
+		left: 5.02vw;
+		height: auto;
+	}
+	.norton_pwd1 {
+		float: left;
+		margin: 10% 0px 0px 5%;
+		width: 16%;
+		height: 15vh;
+	}
+	.norton_pwd2 {
+		float: left;
+		margin: 0% 0px 0px 5%;
+		width: 40%;
+		height: auto;
+	}
+	.norton_pwd3 {
+		float: left;
+		margin: 0% 0px 0px 5%;
+		width: 25%;
+		height: auto;
+	}
+	.menu_line {
+		background-color: #f4af35;
+		width: 89.4vw;
+		height: 8px;
+		top: 16.5vh;
+		left: 0vw;
+		float: left;
+		position: absolute;
+		display: flex;
+	}
+	.warning {
+		float: left;
+		margin: 0px 1vw 0vh 0vw;
+	}
+	.footer_account {
+		background-color: #0b419a;
+		color: #0b419a;
+		width: 89.4%;
+		height: 14px;
+		position: absolute;
+		float: left;
+		left: 5.02vw;
+		bottom: 0;
+	}
+	.dis_cont {
+		width: 66%;
+		height: auto;
+		margin: 10% 0px 0px 2vw;
+		position: absolute;
+		background-color: #c1e5f3;
+		border-radius: 10px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.disclaimer_points {
+		width: 97%;
+		float: left;
+		font-family: segoeuiregular;
+		font-size: 8px;
+		padding: 1vh 1% 0px 1%;
+		margin: 0vh 1% 0vh 1%;
+		color: #555555;
+		line-height: 12px;
+		background-color: #c1e5f3;
+		height: auto;
+	}
+	.disclaimer_points p {
+		color: #333333;
+		font-size: 14px;
+		font-family: segoeuiregular;
+		padding-left: 8px;
+		text-decoration: none;
+	}
+	.disc_sign {
+		text-align: left;
+		font-size: 10px;
+		float: right;
+		height: 7vh;
+		width: auto;
+		font-family: segoeuiregular;
+		margin: 0px 0px 0px 0px;
+		color: #333333;
+	}
+	.login_sum_head {
+		color: #444444;
+		font-family: segoeuiregular;
+		margin: 5px 0vw 0vh 3%;
+		float: left;
+		font-size: 8px;
+	}
+	img.login2_divider {
+    flex-shrink: 1;
+    width: 80%;
+}
+_:-ms-fullscreen, :root .login_cont { -ms-transform: translate(0vw, -3%); }
+_:-ms-fullscreen, :root .dis_cont { -ms-transform: translate(0vw, 1vh); }
+_:-ms-fullscreen, :root .pwd_cont { -ms-transform: translate(0vw, 0%);}
+_:-ms-lang(x), .login_cont { -ms-transform: translate(0%, -3%)\9; }
+_:-ms-lang(x), .dis_cont { -ms-transform: translate(0%, 1vh)\9; }
+_:-ms-lang(x), .pwd_cont { -ms-transform: translate(0%, 0%)\9; }
+_:-ms-lang(x), #keyBoardDiv { z-index:16009\9; }
+
+ ::i-block-chrome, .dis_cont {
+    margin: 0% 0px 0px 2vw;
+    left: 50vw;
+    }
+.preview_container{
+	display: block;
+	}
+	.potra_message{
+	display: none;
+	}
+	.message{
+	display: none;
+	}
+	.preview{
+	display: block;
+	}
+	 .rllogo{
+	display: none;    }
+    .rlogo
+    {
+	display: none;    }
+}
+@media only screen  and (min-width: 480px) {
+/* CR_28891 Added by shridev start*/
+	/* img#refresh_captcha {
+       margin: 0% 0% 1% 0%;
+       height: 5vh;
+       cursor: pointer;
+       width: 10% !important;
+} */  /* shri 2 */
+img#refresh_captcha {
+    position: absolute;
+    margin: 0% 0% 0% 20%;
+    height: 10%;
+    cursor: pointer;
+    width: 9% !important;
+} 
+
+	/* img.img_captcha {
+    margin: 0% 0% 1% 1%;
+    width: 27% !important;
+    height: 5vh;
+} */ 
+
+img.img_captcha {
+    margin: 0% 0% 0% 16%;
+    width: 30% !important;
+    height: 42%;
+} 
+
+/* .id_input_cap input {
+    flex-wrap: nowrap;
+    float: left;
+    width: 33.7%;
+    resize: auto;
+    height: 4.0vh;
+    text-align: LEFT;
+    color: #000000;
+    font-family: segoeuiregular;
+    margin: 0px 0vw 0vh 9%;
+    padding: 0.5vh 0px 0px 2%;
+    font-size: 1.1vw;
+} */  
+
+.captcha_class input {
+    flex-wrap: nowrap;
+    width: 15%;
+    height: 9%;
+    position: absolute;
+    text-align: LEFT;
+    color: #000000;
+    font-family: segoeuiregular;
+    margin: 0% 0% 0% 1%;
+    padding: 0% 2% 0% 0%;
+    font-size: 3vh;
+}
+/* CR_28891 Added by shridev end*/
+	.line1 {
+    width: 22vw;
+    height: 40vh;
+    -webkit-transform: translateY(-30px)          translateX(5px)          rotate(40deg);
+    /* background-color: #f7f1f1; */
+    position: fixed;
+    top: 32vh;
+    z-index: 1;
+    right: 12vw;
+    /* border: 1px solid #f4af35; */
+    /* border-radius: 30px; */
+}
+	/* Styling the login section */
+	html {
+		overflow: hidden;
+	}
+	body {
+		background-color: #9198a3;
+	}
+	.header {
+		background-color: #0b419a;
+		width: 89.4%;
+		height: 17vh;
+		top: 0vh;
+		left: 5.02vw;
+		position: fixed;
+		float: left;
+		display: flex;
+		display:-webkit-flex;
+		z-index: 3;
+	}
+	.logo {
+		height: 16vh;
+		float: left;
+		flex-shrink: 6;
+	}
+	.blogo {
+		width: 65%;
+		margin: 22px 32px 28px 32px;
+	}
+	.quicklink {
+		color: aliceblue;
+		width: 72%;
+		height: 3vh;
+		float: none;
+		text-align: right;
+		font-size: 1.2vw;
+		margin: 3% 0px 0px 0%;
+		font-family: segoeuiregular;
+	}
+	
+#hindi
+	{
+	text-decoration:none;
+	color: aliceblue;
+	text-align: right;
+	float: right;
+	}
+	#keyBoardDiv {
+    position: relative;
+    margin: 7vh 0vw 0vh 0vw;
+    z-index: 16050;
+    right: 29vw;
+}
+.login_button_contuserid {
+		float: left;
+		height: 3.9vh;
+		width: 77%;
+	}
+.button_textuserid {
+		float: left;
+		color: #555555;
+		font-size: 1.4vw;
+		font-family: segoeuisemibold;
+		margin: 20px 0px 0px 5%;
+	}
+.userid_frgt {
+		height: 1.4vw;
+		color: #000000;
+		font-size: 1.3vw;
+		font-family: segoeuisemibold;
+		margin: 0vh 3vw 0px 0vw;
+		float: right;
+		cursor: pointer;
+		display: flex;
+		left: 0vw;
+	}
+	.log_about {
+		width: 5vw;
+		float: left;
+	}
+	.log_careers {
+		width: 100%;
+		float: left;
+		text-decoration: none;
+		text-align: left;
+		color: aliceblue;
+	}
+	.log_find {
+		width: auto;
+		float: left;
+		margin: 0px 10px 0px 0px;
+	}
+	.login_divider{
+		margin: 0px 0px 0px 0px;
+		float: left;
+	}
+	.login1_divider {
+		margin: 5px 9px 0px 9px;
+		float: left;
+	}
+	.login_bar {
+		background-color: #ffffff;
+		width: 89.4%;
+		height: 6vh;
+		position: fixed;
+		top: 16.8vh;
+		left: 5.02vw;
+		border-bottom: 1px solid #d9d9d9;
+		float: left;
+		display: flex;
+		z-index: 2;
+	}
+	.my_login {
+		float: left;
+		width: 8.5%;
+		height: 6.1vh;
+	}
+	.my_login a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 20px;
+	}
+	.my_login1 {
+		float: left;
+		width: 10.5%;
+		height: 6.1vh;
+	}
+	.my_login1 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 26px;
+	}
+	.my_login2 {
+		float: left;
+		width: 6.5%;
+		height: 6.1vh;
+	}
+	.my_login2 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 20px;
+	}
+	.my_login3 {
+		float: left;
+		width: 9.5%;
+		height: 6.1vh;
+	}
+	.my_login3 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 24px;
+	}
+	.my_login4 {
+		float: left;
+		width: 7.5%;
+		height: 6.1vh;
+	}
+	.my_login4 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 20px;
+	}
+	.my_login5 {
+		float: left;
+		width: 10%;
+		height: 6.1vh;
+	}
+	.my_login5 a {
+		color: #0b41fa;
+		float: left;
+		text-decoration: none;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 8px 0px 2px 32px;
+	}
+	.login_container {
+	/* float: left; */
+	top: 22.9vh;
+	position: fixed;
+	left: 5.02vw;
+	height: 51vh;
+	display: flex;
+	width: 89.4%;
+	}
+	.login_content {
+		float: left;
+		display: flex;
+		/* flex-grow: initial; */
+		height: 50.6vh;
+		width: 100%;
+		z-index: -1;
+	}
+	.arrow_cont {
+		width: 53%;
+		height: 40px;
+		margin: 15% 0px 0px 1.5vw;
+		position: fixed;
+		-ms-transform: translate(-167%, -50%);
+	}
+	.login_cont {
+		width: 25%;
+		height: auto;
+		margin: 0px 0px 0px 0%;
+		position: fixed;
+		border: 1px solid #facd58;
+		opacity: 1;
+		z-index: 2;
+		background-color: transparent;
+		right: 11vw;
+		top: 24vh;
+		filter: alpha(opacity=60);
+		border-radius: 50px;
+	}
+	.login_text {
+		height: 29px;
+		color: #000000;
+		width: 94%;
+		font-size: 1.5vw;
+		text-align: center;
+		font-family: segoeuisemibold;
+		margin: 5px 0px 0px 0vw;
+	}
+	.login_radio {
+		height: 35px;
+		margin: 30px 0px 0px 0px;
+	}
+	.l_login_radio {
+		height: 5vh;
+		margin: 2vh 0px 0px 8%;
+		width: 92%;
+	}
+	.radio_ind_cont {
+		float: left;
+		height: 35px;
+		width: 50%;
+	}
+	.radio_login {
+		float: left;
+		margin: 3px 0px 0px 0px;
+		cursor: pointer;
+	}
+	#radio_login1,#radio_login2,.radio_login1,.radio_login2 {
+		float: left;
+		margin: 8px 0px 0px 2px;
+		cursor: pointer;
+	}
+	.radio_corp_cont {
+		float: left;
+		height: 35px;
+		width: 50%;
+	}
+	.radio_d_enable {
+		float: left;
+		color: #000000;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 0px 0px 0px 4px;
+	}
+	.userid_cont {
+		float: left;
+		height: auto;
+		width: 100%;
+	}
+	.l_userid_cont {
+		float: left;
+		height: 12vh;
+		width: 100%;
+	}
+	.userid_text {
+		color: #555555;
+		font-size: 1.4vw;
+		font-family: segoeuiregular;
+		float: left;
+		height: 21px;
+		width: 95%;
+		margin: 0.5vh 0px 2vh 5%;
+	}
+	.l_userid_text {
+		color: #000000;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		float: left;
+		height: 5vh;
+		width: 90%;
+		margin: 1vh 0px 0vh 10%;
+	}
+	.login_button_cont {
+		float: left;
+		height: 7.5vh;
+		width: 100%;
+	}
+	.id_input input {
+		/* flex-wrap: nowrap; */
+		display: block;
+		float: left;
+		width: 78%;
+		resize: auto;
+		height: 4vh;
+		text-align: LEFT;
+		color: #000000;
+		font-family: segoeuiregular;
+		margin: 0px 0vw 0vh 9%;
+		padding: 0.5vh 0px 0px 3%;
+		font-size: 1.1vw;
+	}
+	.id_input1 input {
+		/* flex-wrap: nowrap; */
+		display: block;
+		float: left;
+		width: 78%;
+		resize: auto;
+		height: 4vh;
+		text-align: LEFT;
+		color: #000000;
+		font-family: segoeuiregular;
+		margin: 0px 0vw 0vh 9%;
+		padding: 0.5vh 0px 0px 3%;
+		font-size: 1.1vw;
+	}
+	.login_button {
+		background-color: #555555;
+		float: left;
+		color: #facd58;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.05vw;
+		cursor: pointer;
+		width: 128px;
+		height: 2.1vh;
+		margin: 1vh 0vw 0vh 26px;
+		padding: 1vh 0vw 1.9vh 0vw;
+		font-family: segoe ui;
+		font-weight: bold;
+		border-radius: 3px;
+	}
+	.l_login_button {
+		background-color: #555555;
+		float: left;
+		color: #facd58;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.05vw;
+		cursor: pointer;
+		width: 34%;
+		height: 20px;
+		margin: 1.5vh 0vw 0vh 30px;
+		padding: 1vh 0vw 1.5vh 0vw;
+		font-family: segoeuisemibold;
+		border-radius: 3px;
+	}
+	.l_register_button {
+		background-color: #dee1e2b3;
+		float: left;
+		color: #000000;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.05vw;
+		cursor: pointer;
+		width: 34%;
+		height: 20px;
+		margin: 1.5vh 0vw 0vh 26px;
+		padding: 1vh 0vw 1.5vh 0vw;
+		font-family: segoeuisemibold;
+		border-radius: 3px;
+	}
+	.button_text {
+		float: left;
+		color: #555555;
+		cursor: pointer;
+		font-size: 1.2vw;
+		font-family: segoeuisemibold;
+		margin: 20px 0px 0px 54px;
+	}
+	.login_security {
+		display: flex;
+		float: left;
+		margin: 0px 0px 0px 0%;
+		background-color: #f7f1f1;
+		width: 89.4%;
+		top: 73.5vh;
+		position: fixed;
+		left: 5.02vw;
+		height: calc(58vh - 131px - 24px);
+	}
+	.left_arrow {
+		float: left;
+		position: absolute;
+		cursor: pointer;
+	}
+	.right_arrow {
+		margin: 0px 0px 0px 49vw;
+		position: absolute;
+		cursor: pointer;
+	}
+	.radio_series_cont {
+		width: 100px;
+		height: 50px;
+		margin: 335px 0px 0px 45.5vw;
+		position: absolute;
+	}
+	.norton_head {
+		color: #000;
+		font-family: segoeuisemibold;
+		font-size: 1.2vw;
+	}
+	.norton_body {
+		color: #000;
+		font-family: segoeuiregular;
+		font-size: 0.85vw;
+	}
+	.norton_sec1 {
+		float: left;
+		margin: 35px 0px 0px 2%;
+		width: 16%;
+		height: 14vh;
+	}
+	.norton_sec2 {
+		float: left;
+		margin: 35px 0px 0px 54px;
+		width: 45.5%;
+		height: 15vh;
+		font-family: segoeuiregular;
+	}
+	.norton_sec3 {
+		float: left;
+		margin: 35px 0px 0px 70px;
+		width: 20%;
+		height: 13vh;
+	}
+	/* Styling the login disclaimer section */
+	.disclaimer_container {
+		float: left;
+		margin: 114px 0px 0px 61px;
+		position: relative;
+		width: 89.4vw;
+		background-color: #dee1e2;
+		height: 78.7vh;
+	}
+	.disclaimer_text {
+		float: left;
+		margin: 25px 0px 0px 34px;
+		width: 84.6vw;
+		background-color: #ffffff;
+		height: 61vh;
+	}
+	.dis_sum_head {
+		color: #000000;
+		font-size: 2vw;
+		font-family: segoeuiregular;
+		margin: 15px 0vw 0vh 2.3vw;
+		float: left;
+		width: 56%;
+	}
+	.disclaimer_image {
+		float: left;
+		width: 21vw;
+		height: 34vh;
+	}
+	.dis_image {
+		float: left;
+		margin: 0px 0px 0px 45px;
+	}
+	.dis_bulet {
+		float: left;
+		margin: 0px 0% 0px 1%;
+	}
+	.dis_bulet a {
+		text-decoration: none;
+	}
+	.disclaimer_decl {
+		float: left;
+		margin: 2vh 0vw 0vh 15px;
+		width: 93%;
+		font-size: 1vw;
+		font-family: segoeuisemibold;
+		line-height: 1.5vw;
+	}
+	.disc_sign {
+		text-align: left;
+		font-size: 14px;
+		float: right;
+		height: 7vh;
+		width: 13vw;
+		font-family: segoeuiregular;
+		margin: 0px 0px 0px 0px;
+		color: #8f8f8f;
+	}
+	.disc_iagree {
+		margin: 42px 0px 0px 37vw;
+		text-align: center;
+		cursor: pointer;
+	}
+	/* Styling the password screen section */
+	.pwd_container {
+		float: left;
+		margin: 0% 0px 0px 0vw;
+		background-color: #afc8d2;
+		display: flex;
+		width: 89.4%;
+		top: 16.9vh;
+		position: absolute;
+		left: 5.02vw;
+	}
+	.pwd_content {
+		float: left;
+		height: 63vh;
+		width: 100%;
+	}
+	.pwd_cont {
+		width: 21%;
+		height: auto;
+		margin: 5vh 0px 0px 65vw;
+		position: absolute;
+		background-color: #e2f6ff;
+	}
+	.pwd_quicklink {
+		color: aliceblue;
+		width: auto;
+		height: 14vh;
+		margin: 2vh 4px 0px 30%;
+		font-family: segoeuiregular;
+		font-size: 1vw;
+	}
+	.pwd_welcome {
+		width: 100%;
+		float: left;
+	}
+	.pwd_msg {
+		width: auto;
+		float: left;
+	}
+	.pwd_inp {
+		width: auto;
+		float: left;
+	}
+	.pwd_text1 {
+		height: 5vh;
+		color: #867c7c;
+		font-size: 1.7vw;
+		font-family: segoeuiregular;
+		margin: 5% 0px 0px 5%;
+		width: 34%;
+		float: left;
+	}
+	.pwd_text2 {
+		height: 20px;
+		float: left;
+		color: #867c7c;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 7% 0px 0px 3%;
+	}
+	.pass_cont {
+		float: left;
+		height: 18vh;
+		width: 100%;
+	}
+	.pass_text {
+		color: #555555;
+		font-size: 1.4vw;
+		font-family: segoeuiregular;
+		float: left;
+		height: 4vh;
+		width: 95%;
+		margin: 0.5vh 0px 2% 5%;
+	}
+	.pass_input input {
+		display: block;
+		margin: 0.5vh 0vw 0vh 2%;
+		width: 53%;
+		height: 5vh;
+		padding: 0px 0px 0px 5%;
+		color: #444444;
+		flex-wrap: nowrap; */
+		display: block;
+		float: left;
+		resize: auto;
+		text-align: LEFT;
+		font-family: segoeuiregular;
+		font-size: 1.1vw;
+	}
+	.vkeyboard {
+		float: left;
+		margin: 0px 2% 0px 5%;
+		cursor: pointer;
+		width: 25%;
+	}
+	.pass_button {
+		background-color: #555555;
+		float: left;
+		color: #facd58;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.05vw;
+		cursor: pointer;
+		width: 30%;
+		height: 2.1vh;
+		margin: 1vh 0vw 0vh 6%;
+		padding: 1vh 0vw 1.9vh 0vw;
+		font-family: segoeuisemibold;
+		border-radius: 3px;
+	}
+	.pwd_frgt {
+		height: 5vh;
+		color: #867c7c;
+		font-size: 1.2vw;
+		font-family: segoeuiregular;
+		margin: 1vh 0px 0px 10%;
+		float: left;
+		cursor: pointer;
+	}
+	.pwd_security {
+		display: flex;
+		float: left;
+		margin: 0px 0px 0px 0vw;
+		background-color: #f7f1f1;
+		width: 89.4%;
+		top: 79.9vh;
+		z-index: -1;
+		position: fixed;
+		left: 5.02vw;
+		height: auto;
+	}
+	.norton_pwd1 {
+		float: left;
+		margin: 1% 0px 0px 5%;
+		width: 16%;
+		height: 18vh;
+	}
+	.norton_pwd2 {
+		float: left;
+		margin: 1% 0px 0px 5%;
+		width: 37%;
+		height: 18vh;
+	}
+	.norton_pwd3 {
+		float: left;
+		margin: 1% 0px 0px 8%;
+		width: 20%;
+		height: 14vh;
+	}
+	.menu_line {
+		background-color: #f4af35;
+		width: 89.4vw;
+		height: 8px;
+		top: 16.15vh;
+		left: 5.02vw;
+		float: left;
+		position: fixed;
+		display: flex;
+	}
+	.warning {
+		float: left;
+		margin: 0px 1vw 0vh 0vw;
+	}
+	.footer_account {
+		background-color: #0b419a;
+		color: #0b419a;
+		width: 89.4%;
+		height: 14px;
+		position: fixed;
+		float: left;
+		left: 5.02vw;
+		bottom: 0;
+	}
+	.dis_cont {
+		width: 66%;
+		height: auto;
+		margin: 2% 0px 0px 2vw;
+		position: absolute;
+		background-color: #c1e5f3;
+		border-radius: 10px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.disclaimer_points {
+		width: 100%;
+		float: left;
+		font-family: segoeuiregular;
+		font-size: 1.1vw;
+		padding: 1vh 1% 0px 1%;
+		margin: 1vh 1% 0vh 1%;
+		color: #555555;
+		line-height: 2vw;
+		background-color: #c1e5f3;
+		height: auto;
+	}
+	.disclaimer_points p {
+		color: #333333;
+		font-size: 14px;
+		font-family: segoeuiregular;
+		padding-left: 8px;
+		text-decoration: none;
+	}
+	.disc_sign {
+		text-align: left;
+		font-size: 1vw;
+		float: right;
+		height: 7vh;
+		width: 13vw;
+		font-family: segoeuiregular;
+		margin: 0px 0px 0px 0px;
+		color: #333333;
+	}
+	.login_sum_head {
+		color: #444444;
+		font-family: segoeuiregular;
+		margin: 5px 0vw 0vh 3%;
+		float: left;
+		font-size: 1.1vw;
+	}
+	img.login2_divider {
+    flex-shrink: 1;
+    width: 80%;
+}
+	
+_:-ms-fullscreen, :root .dis_cont { -ms-transform: translate(0vw, 1vh); }
+_:-ms-fullscreen, :root .pwd_cont { -ms-transform: translate(0vw, 0%);}
+_:-ms-lang(x), .login_cont { -ms-transform: translate(0%, -3%)\9; }
+_:-ms-lang(x), .dis_cont { -ms-transform: translate(0%, 1vh)\9; }
+_:-ms-lang(x), .pwd_cont { -ms-transform: translate(0%, 0%)\9; }
+_:-ms-lang(x), #keyBoardDiv { z-index:16009\9; }
+
+ ::i-block-chrome, .dis_cont {
+    margin: 0% 0px 0px 2vw;
+    left: 50vw;
+    }
+.preview_container{
+	display: block;
+	}
+	.potra_message{
+	display: none;
+	}
+	.message{
+	display: none;
+	}
+	.preview{
+	display: block;
+	}
+	 .rllogo{
+	display: none;    }
+    .rlogo
+    {
+	display: none;    }
+}

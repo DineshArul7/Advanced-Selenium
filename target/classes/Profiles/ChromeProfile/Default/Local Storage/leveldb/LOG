@@ -1,0 +1,45 @@
+2020/12/29-14:24:51.785 ea8 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Local Storage\leveldb/MANIFEST-000001
+2020/12/29-14:24:51.789 ea8 Recovering log #120
+2020/12/29-14:24:51.791 ea8 Reusing old log C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Local Storage\leveldb/000120.log 
+2020/12/29-14:54:08.202 4954 Level-0 table #124: started
+2020/12/29-14:54:08.213 4954 Level-0 table #124: 11412 bytes OK
+2020/12/29-14:54:08.217 4954 Delete type=0 #120
+2020/12/29-14:54:08.218 ea8 Compacting 4@0 + 1@1 files
+2020/12/29-14:54:08.226 ea8 Generated table #125@0: 264 keys, 47996 bytes
+2020/12/29-14:54:08.226 ea8 Compacted 4@0 + 1@1 files => 47996 bytes
+2020/12/29-14:54:08.226 ea8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/29-14:54:08.230 ea8 Delete type=2 #115
+2020/12/29-14:54:08.230 ea8 Delete type=2 #117
+2020/12/29-14:54:08.230 ea8 Delete type=2 #119
+2020/12/29-14:54:08.230 ea8 Delete type=2 #121
+2020/12/29-14:54:08.230 ea8 Delete type=2 #124
+2020/12/29-15:10:36.188 5730 Level-0 table #127: started
+2020/12/29-15:10:36.202 5730 Level-0 table #127: 13429 bytes OK
+2020/12/29-15:10:36.205 5730 Delete type=0 #123
+2020/12/29-15:43:17.330 4d90 Level-0 table #129: started
+2020/12/29-15:43:17.341 4d90 Level-0 table #129: 12188 bytes OK
+2020/12/29-15:43:17.344 4d90 Delete type=0 #126
+2020/12/29-16:37:05.418 2fe8 Level-0 table #131: started
+2020/12/29-16:37:05.428 2fe8 Level-0 table #131: 9714 bytes OK
+2020/12/29-16:37:05.433 2fe8 Delete type=0 #128
+2020/12/29-17:33:01.938 5354 Level-0 table #133: started
+2020/12/29-17:33:01.948 5354 Level-0 table #133: 10876 bytes OK
+2020/12/29-17:33:01.949 5354 Delete type=0 #130
+2020/12/29-17:33:01.950 4290 Compacting 4@0 + 1@1 files
+2020/12/29-17:33:01.952 4290 Generated table #134@0: 266 keys, 49677 bytes
+2020/12/29-17:33:01.952 4290 Compacted 4@0 + 1@1 files => 49677 bytes
+2020/12/29-17:33:01.952 4290 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/29-17:33:01.953 4290 Delete type=2 #125
+2020/12/29-17:33:01.953 4290 Delete type=2 #127
+2020/12/29-17:33:01.953 4290 Delete type=2 #129
+2020/12/29-17:33:01.953 4290 Delete type=2 #131
+2020/12/29-17:33:01.953 4290 Delete type=2 #133
+2020/12/29-17:53:46.508 5628 Level-0 table #136: started
+2020/12/29-17:53:46.517 5628 Level-0 table #136: 9071 bytes OK
+2020/12/29-17:53:46.519 5628 Delete type=0 #132
+2020/12/29-17:54:59.973 5628 Level-0 table #138: started
+2020/12/29-17:54:59.983 5628 Level-0 table #138: 11234 bytes OK
+2020/12/29-17:54:59.984 5628 Delete type=0 #135
+2020/12/29-18:04:45.306 4c60 Level-0 table #140: started
+2020/12/29-18:04:45.311 4c60 Level-0 table #140: 10744 bytes OK
+2020/12/29-18:04:45.315 4c60 Delete type=0 #137

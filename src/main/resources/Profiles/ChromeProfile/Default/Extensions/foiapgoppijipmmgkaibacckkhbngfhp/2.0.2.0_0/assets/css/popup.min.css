@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'CalibreWeb';
+  font-weight: 400;
+  src: url("../fonts/CalibreWeb-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'CalibreWeb';
+  font-weight: 600;
+  src: url("../fonts/CalibreWeb-Semibold.woff") format("woff"); }
+
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.body--transitioning {
+  overflow: hidden; }
+
+body, button, input {
+  color: #111;
+  font-family: "CalibreWeb", "Helvetica", sans-serif;
+  font-size: 14px; }
+
+button {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.uninitialized-placeholder {
+  min-width: 175px;
+  min-height: 165px; }
+
+.clearfix {
+  clear: both;
+  font-size: 0; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.menu {
+  width: 175px;
+  animation: fadeIn 200ms ease; }
+  .menu li {
+    border-bottom: 1px solid #E0E5EB; }
+  .menu li:last-child {
+    border-bottom: none; }
+
+.menu__button {
+  background: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px 0 17px 51px;
+  text-align: left;
+  width: 100%;
+  min-height: 55px;
+  position: relative;
+  display: block; }
+  .menu__button:hover {
+    background: #EFF4F7; }
+  .menu__button:focus {
+    outline: none; }
+  .menu__button:disabled {
+    pointer-events: none;
+    opacity: 0.3; }
+    .menu__button:disabled:hover, .menu__button:disabled:focus {
+      background: #fff; }
+  .menu__button:before {
+    content: '';
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    margin-top: 2px;
+    top: 15px;
+    left: 20px;
+    background: center center no-repeat;
+    background-size: 21px; }
+
+.menu__button--link:before {
+  background-image: url("../images/link.svg"); }
+
+.menu__button--image:before {
+  background-image: url("../images/image.svg"); }
+
+.menu__button--image:disabled:before {
+  margin-top: 6px; }
+
+.menu__button--screenshot:before {
+  background-image: url("../images/crop.svg"); }
+
+.menu__button--loading:before {
+  background-image: url("../images/loading-bubbles-smoke.svg");
+  opacity: 1; }
+
+.menu__button--disabled {
+  pointer-events: none;
+  cursor: default; }
+  .menu__button--disabled:hover, .menu__button--disabled:focus {
+    background: #fff; }
+
+.menu__button__label {
+  font-size: 14px;
+  display: block; }
+
+.menu__button--dashboard {
+  padding-left: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606972;
+  min-height: 0;
+  opacity: 0.7; }
+  .menu__button--dashboard:hover {
+    opacity: 1; }
+  .menu__button--dashboard img {
+    margin-left: 5px; }
+  .menu__button--dashboard:before {
+    display: none; }
+
+.iframe-wrap {
+  width: 510px;
+  height: 385px;
+  position: relative; }
+  .iframe-wrap.is-loading {
+    background: url("../images/loading-bubbles-smoke.svg") center center no-repeat;
+    background-size: 90px; }
+
+.body--transitioning .iframe-wrap.is-loading {
+  background-image: none; }
+
+.iframe-wrap iframe {
+  border: 0 none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }

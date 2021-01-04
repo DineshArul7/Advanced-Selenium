@@ -1,0 +1,760 @@
+/* SONGS PANEL */
+
+/************************************
+* GENERAL **
+************************************/
+
+.songsPanel {
+	position: absolute;
+	right: 1px;
+	
+	top: 39px;
+	
+	padding-right: 0px;
+	padding-bottom: 74px;
+
+	background-color: #CCCCCC;
+	width: 382px;
+	height: 100%;
+	
+	border-left: 2px solid #3B3B3B;
+	border-right: 1px solid #000000;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/************************************
+* TOP PART (TAB NAVIGATION) 
+************************************/
+
+.searchArea {
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+
+	width: 100%;
+	height: 73px;
+	background-color: #5F5F5F;
+	background: -webkit-linear-gradient(top, #5F5F5F, #3E3E3E);
+
+	position: absolute;
+}
+
+.searchAreaTabs {
+	width: 104%;
+	height: 33px;
+	display: block;
+	float: left;
+}
+
+
+.tabActive,
+.tabPassive
+{
+	width: 32%;
+	height: 34px;
+	float: left;
+}
+
+.tabActive
+{
+	border-top: 1px solid #707070;
+	border-right: 1px solid #707070;
+	cursor: auto;
+}
+
+.tabPassive
+{
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #707070;
+	
+	
+	border-right: 1px solid #000000;
+	cursor: pointer;
+}
+
+.tabShadowBoth {
+	-moz-box-shadow: 		inset 10px -10px 20px -10px #000, inset -10px 10px 20px -10px #000;
+	-webkit-box-shadow: inset 10px -10px 20px -10px #000, inset -10px 10px 20px -10px #000;
+	box-shadow: 				inset 10px -10px 20px -10px #000, inset -10px 10px 20px -10px #000;	
+
+/*	-moz-box-shadow: inset 0 0 20px #000;
+	-webkit-box-shadow: inset 0 0 20px #000;
+	box-shadow: inset 0 0 20px #000;	
+*/
+}
+
+.tabShadowRight {
+	-moz-box-shadow: 		inset 0 -10px 20px -10px #000, inset -10px 10px 20px -10px #000;
+	-webkit-box-shadow: inset 0 -10px 20px -10px #000, inset -10px 10px 20px -10px #000;
+	box-shadow: 				inset 0 -10px 20px -10px #000, inset -10px 10px 20px -10px #000;	
+}
+
+.tabShadowLeft {
+	-moz-box-shadow: 		inset 10px -10px 20px -10px #000, inset 0 10px 20px -10px #000;
+	-webkit-box-shadow: inset 10px -10px 20px -10px #000, inset 0 10px 20px -10px #000;
+	box-shadow: 				inset 10px -10px 20px -10px #000, inset 0 10px 20px -10px #000;	
+}
+
+
+
+.tabSC { 
+	background-image: url("../img/default/tabSC.png");
+}
+.tabLocal	{
+	background-image: url("../img/default/tabLocal.png");
+}
+.tabSCSelected { 
+	background-image: url("../img/default/tabSCSelected.png");
+}
+.tabLocalSelected { 
+	background-image: url("../img/default/tabLocalSelected.png");
+}
+.tabGDrive { 
+	background-image: url("../img/default/tabGDrive.png");
+}
+.tabGDriveSelected { 
+	background-image: url("../img/default/tabGDriveSelected.png");
+}
+
+.tabSC,
+.tabLocal,
+.tabSCSelected,
+.tabLocalSelected,
+.tabGDrive,
+.tabGDriveSelected
+{
+	background-size: 104px 28px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+/************************************
+* MIDDLE PART (TAB CONTENTS) 
+************************************/
+
+.tabContents
+{
+	width: 100%;
+	height: 38px;
+	position: absolute;
+	top: 35px;
+	border-right: 1px solid #707070;
+}
+
+.searchArea form {
+	width: 100%;
+	padding-right: 10px;
+	top: 20px;
+}
+
+/*.searchInputWrapper
+{
+	border: 1px solid #FF00FF;
+	width: 200px;
+	height: 35px;
+	overflow: hidden;
+	margin-right: 130px;
+	padding-right: 5px;
+	background: url("../img/default/searchInputLeft.png") no-repeat;
+	background-position: top left;		
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.searchInputWrapper:focus {
+	background-position: bottom left;	
+}
+*/
+.searchInput
+{
+	position: relative;
+	top: -10px;
+	margin-top: 2px;
+	border: none;
+	background-color: transparent;
+	width: 100%;
+	font-size: 11px;	
+}
+
+.searchInput:focus {
+	outline: none;
+}
+
+
+.searchInputWrapper {
+	height: 0px;
+	margin-top: 2px;
+	margin-right: 92px;
+
+	border-style: solid;
+	border-width: 17px 28px 17px 17px;
+	-moz-border-image: url("../img/default/searchInput.png") 17 28 17 19 stretch;
+	-webkit-border-image: url("../img/default/searchInput.png") 17 28 17 19 stretch;
+	-o-border-image: url("../img/default/searchInput.png") 17 28 17 19 stretch;
+	border-image: url("../img/default/searchInput.png") 17 28 17 19 stretch;
+	border-image-slice: 17 28 17 19;
+}
+
+
+/*
+	TODO: implement using this while the search input has focus
+*/
+.searchInputWrapperActive {
+	-moz-border-image: url("../img/default/searchInputSelected.png") 17 28 17 19 stretch;
+	-webkit-border-image: url("../img/default/searchInputSelected.png") 17 28 17 19 stretch;
+	-o-border-image: url("../img/default/searchInputSelected.png") 17 28 17 19 stretch;
+	border-image: url("../img/default/searchInputSelected.png") 17 28 17 19 stretch;
+}
+
+.btnSearch
+{
+	position: absolute;
+	top: 8px;
+	right: 39px;
+	width: 50px;
+	height: 23px;
+	font-weight: bold;
+	background-image: url("../img/default/btnFind.png");
+	background-size: 50px 69px;
+	background-repeat: no-repeat; 
+	background-color: transparent;
+	border: none;
+	
+}
+
+.btnPreviousPage,
+.btnNextPage 
+{
+	position: absolute;
+	top: 13px;
+	width: 9px;
+	height: 12px;
+}
+
+.btnPreviousPage
+{
+	right: 22px;
+	background-image: url("../img/default/btnPreviousPage.png");
+	background-size: 18px 36px;
+	background-repeat: no-repeat; 
+}
+
+.btnNextPage 
+{
+	right: 9px;
+	background-image: url("../img/default/btnNextPage.png");
+	background-size: 18px 36px;
+	background-repeat: no-repeat; 
+}
+
+.btnStretchingWrapper {
+	width: 100%;
+	position: absolute;
+	top: 8px;
+	padding-left: 22px;
+}
+
+.btnStretching {
+	background: transparent url("../img/default/btnRoundedCap.png") no-repeat scroll top right;
+	background-size: 14px 69px;
+	cursor: pointer;
+}
+.btnStretching span {
+	font-weight: bold;
+	font-size: 11px;  
+	color: #000000;	
+
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 17px;
+	padding-right: 0px;
+	margin-right: 14px;
+	margin-left: 13px;
+	line-height: 15px;
+	display: block;
+	
+	background-image: url("../img/default/btnRounded.png");
+	background-size: 700px 69px;
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.localFilesArea
+{
+/*	width: 100%;
+*/}
+.localFilesArea:hover .btnStretching,
+.btnStretching:hover {
+	background-position: center right;
+}
+
+.localFilesArea:active .btnStretching,
+.btnStretching:active {
+	background-position: bottom right;
+}
+.localFilesArea:hover .btnStretching span,
+.btnStretching:hover span {
+	background-position: center left;
+}
+
+.localFilesArea:active .btnStretching span,
+.btnStretching:active span {
+	background-position: bottom left;
+}
+
+
+.browseFileArea { 
+	float: right;
+	width: 100%;	
+	margin-right: 30px;
+	overflow: hidden;
+	cursor: pointer;
+	pointer-events: none;
+	font-size: 11px;  
+}
+
+.browseFileText {
+	font-weight: bold;	
+	font-size: 11px;  
+	color: #000000;
+	position: relative;
+	top: 5px;
+	left: 5px;
+	pointer-events: none;
+	cursor: pointer;
+}
+
+.browseFile { 
+	width: 100%;
+	height: 22px;
+	top: 9px;
+	left: 10px;
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+	cursor: pointer;
+	position: absolute;
+	font-size: 40px;  
+}
+
+.btnGDrive
+{
+	height: 23px;
+	float: right;
+	margin-right: 30px;
+	width: 100%;
+}
+
+
+/************************************
+* MAIN PART (SONGS GRID) 
+************************************/
+
+
+.songsGrid {
+	border-left: 1px solid #000000;
+	width: 100%;
+	height: 100%;
+
+	background-color: #252525;	
+	/* this would be nicer, but causes a strange flicker (at least on Macbook Pro)
+	background: -webkit-linear-gradient(bottom, #000000 0%, #252525 100%); 
+	*/
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin-top: 74px;	
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	padding-bottom: 39px; /* distance from top */	
+}
+
+.songsGridWithBottomPanel 
+{
+	padding-bottom: 114px; /* distance from top + bottom panel height */	
+}
+
+.songRowsWrapper
+{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.songRow,
+.songRowEven {
+	width: 100%;
+	height: 67px;
+	cursor: pointer;
+	position: relative;
+}
+.songRow,
+.songButtonsBg {
+	background-color: #2A2A2A;
+}
+
+.songRowEven,
+.songButtonsBgEven {
+	background-color: #252525;
+}
+
+.songRow:hover,
+.songRow:hover .songButtonsBg,
+.songRowEven:hover,
+.songRowEven:hover .songButtonsBgEven {
+	background-color: #444444;
+}
+
+.songButtonsBg,
+.songButtonsBgEven {
+	float: right;
+	width: 44px;
+	height: 20px;
+}
+
+
+.songThumbnail {
+	width: 47px;
+	height: 47px;
+	margin-top: 11px;
+	margin-left: 10px;
+	display: block;
+	float: left;
+	position: absolute;
+}
+.songDetails {
+	width: 100%;
+	height: 100%;
+	padding-top: 10px;
+	margin-left: 67px;
+	display: block;
+}
+
+.authorLabel {
+	color: #CCCCCC;
+	font-size: 12px;
+	height: 18px;
+	overflow: hidden;
+	display: block;
+	white-space: nowrap;
+	margin-top: 2px;
+}
+.titleLabel {
+	color: #808080;
+	font-size: 11px;
+	height: 13px;
+	width: 100%;
+	overflow: hidden;
+	display: block;
+	white-space: nowrap;
+}
+.durationLabel {
+	color: #555555;
+	font-size: 11px;	
+	padding-top: 3px;
+}
+
+.songRowOnDeck .authorLabel,
+.songRowOnDeck .titleLabel,
+.songRowOnDeck .durationLabel
+{
+	color: #00CCFF;	
+}
+
+.songRowFailed .authorLabel,
+.songRowFailed .titleLabel,
+.songRowFailed .durationLabel
+{
+	color: #C90202;	
+}
+
+.searchState
+{
+	color: #FFFFFF;
+	position:absolute;
+	text-align: center;
+	padding-top: 30px;
+	width: 100%;	
+}
+
+.searchState div
+{
+	text-align: center;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+
+.songButtonsWrapper {
+	width: 100%;
+	height: 20px;
+	display: block;
+	position: inherit;
+	top: -72px;
+}
+
+.downloadButton,
+.favoriteButton
+{
+	float: right;
+	width: 15px;
+	height: 15px;
+	margin-top: 3px;
+}
+
+.downloadButton 
+{
+	background-image: url("../img/default/btnDownLoad.png");	
+	background-size: 15px 45px;
+	background-repeat: no-repeat; 
+	margin-right: 3px;
+	margin-left: 5px;
+}
+
+.favoriteButton
+{
+	background-image: url("../img/default/btnFavSong.png");	
+	background-size: 30px 45px;
+	background-repeat: no-repeat; 
+	margin-right: 6px;
+}
+
+/* hidden download button --> force text to flow over the area */
+.songButtonsWrapper .hidden {
+	margin-left: -13px;
+}
+
+.dragProxy
+{
+	width: 50px;
+	height: 50px;
+	background-image: url("../img/default/songDragProxy.png");	
+	background-size: 50px 50px;
+	background-repeat: no-repeat; 
+	z-index: 5000;
+}
+
+/************************************
+* BOTTOM PART (PLAYLIST SELECTION) 
+************************************/
+
+
+.songsListBottomPanel
+{
+	position: absolute;
+	bottom: 39px;
+	width: 100%;
+	height: 75px;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.songsListBottomPanelWrapper
+{
+	border: 1px solid #444444;
+	width: 100%;
+	height: 100%;
+	padding-top: 5px;	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.plButton 
+{
+	cursor: pointer;
+	border: none;
+
+	position: relative;
+	width: 87px;
+	height: 18px;
+
+	color: #656565;
+	font-weight: bold;
+	font-size: 11px;
+	
+	padding-left: 30px;
+	padding-top: 4px;
+	margin-left: 10px;
+}
+.plButton:hover
+{
+	color: #777777;
+}
+
+.plButtonSelected,
+.plButtonSelected:hover
+{
+	color: #01CCFF;
+}
+
+.searchResultsButton .icon { 
+	background-image: url("../img/default/plSearch.png"); 
+	background-size: 38px 57px;
+	background-repeat: no-repeat; 
+}
+.historyButton .icon {
+	background-image: url("../img/default/plHistory.png");
+	background-size: 38px 57px;
+	background-repeat: no-repeat; 
+}
+.favoritesButton .icon {
+	background-image: url("../img/default/plFavorites.png"); 
+	background-size: 38px 57px;
+	background-repeat: no-repeat; 
+}
+
+.icon
+{
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	left: 3px;
+	top: 1px;
+}
+
+.plButton .icon
+{
+	background-position: top left;
+}
+
+.plButton:hover .icon
+{
+	background-position: center left;
+}
+
+.plButton:active .icon
+{
+	background-position: bottom left;
+}
+
+.plButton:focus .icon
+{
+	outline: 0;
+}
+
+.plButtonSelected .icon
+{
+	background-position: top right;
+}
+
+.plButtonSelected:hover .icon
+{
+	background-position: center right;
+}
+
+.plButtonSelected:active .icon
+{
+	background-position: bottom right;
+}
+
+/************************************
+* HI-RES IMAGE DEFINITIONS 
+************************************/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (                min-resolution: 1.5dppx)
+/*only screen and (-webkit-min-device-pixel-ratio: 0.9),
+only screen and (                min-resolution: 0.9dppx) */
+{  
+	.tabSC { 
+		background-image: url("../img/2x/tabSC.png");
+	}
+	.tabLocal	{
+		background-image: url("../img/2x/tabLocal.png");
+	}
+	.tabSCSelected { 
+		background-image: url("../img/2x/tabSCSelected.png");
+	}
+	.tabLocalSelected { 
+		background-image: url("../img/2x/tabLocalSelected.png");
+	}
+	.tabGDrive { 
+		background-image: url("../img/2x/tabGDrive.png");
+	}
+	.tabGDriveSelected { 
+		background-image: url("../img/2x/tabGDriveSelected.png");
+	}
+
+	.searchInputWrapper {
+		-moz-border-image: 		url("../img/2x/searchInput.png") 34 56 34 38 stretch;
+		-webkit-border-image: url("../img/2x/searchInput.png") 34 56 34 38 stretch;
+		-o-border-image: 			url("../img/2x/searchInput.png") 34 56 34 38 stretch;
+		border-image: 				url("../img/2x/searchInput.png") 34 56 34 38 stretch;
+	}
+
+	.searchInputWrapperActive {
+		-moz-border-image: url("../img/2x/searchInputSelected.png") 		34 56 34 38 stretch;
+		-webkit-border-image: url("../img/2x/searchInputSelected.png") 	34 56 34 38 stretch;
+		-o-border-image: url("../img/2x/searchInputSelected.png") 			34 56 34 38 stretch;
+		border-image: url("../img/2x/searchInputSelected.png") 					34 56 34 38 stretch;
+	}
+
+	.btnSearch
+	{
+		background-image: url("../img/2x/btnFind.png");	
+	}
+
+	.btnPreviousPage
+	{
+		background-image: url("../img/2x/btnPreviousPage.png");
+	}
+
+	.btnNextPage 
+	{
+		background-image: url("../img/2x/btnNextPage.png");
+	}
+
+	.btnStretching {
+		background: transparent url("../img/2x/btnRoundedCap.png") no-repeat scroll top right;
+		background-size: 14px 69px;
+	}
+	.btnStretching span {
+		background-image: url("../img/2x/btnRounded.png");
+	}
+
+	.downloadButton 
+	{
+		background-image: url("../img/2x/btnDownLoad.png");	
+	}
+
+	.favoriteButton
+	{
+		background-image: url("../img/2x/btnFavSong.png");	
+	}
+
+	.dragProxy
+	{
+		background-image: url("../img/2x/songDragProxy.png");	
+	}
+
+	.searchResultsButton .icon { 
+		background-image: url("../img/2x/plSearch.png"); 
+	}
+	.historyButton .icon {
+		background-image: url("../img/2x/plHistory.png");
+	}
+	.favoritesButton .icon {
+		background-image: url("../img/2x/plFavorites.png"); 
+	}
+
+}

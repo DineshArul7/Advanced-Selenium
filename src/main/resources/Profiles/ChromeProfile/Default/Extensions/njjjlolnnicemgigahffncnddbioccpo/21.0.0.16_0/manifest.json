@@ -1,0 +1,36 @@
+{
+   "background": {
+      "scripts": [ "BackgroundScripts/CommonJavaScriptServer.js", "Injected/TOSCAChromeRootServer.js", "BackgroundScripts/BackgroundJavaScriptServer.js", "BackgroundScripts/InitializationRoutine.js", "BackgroundScripts/BackgroundLogging.js" ]
+   },
+   "browser_action": {
+      "default_icon": "Resources/Image_TricentisLogo_64x64.png",
+      "default_popup": "Resources/notification.html",
+      "default_title": "Tosca Chrome Extension"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "Resources/ajaxTracer.js", "Resources/wgxpath.install.js", "Resources/sapui5.js", "Injected/TOSCAChromeAutomation.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file:///*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "Injected/shadowDOMUnlockerInjector.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file:///*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Extension can be used with the automation layer of Tricentis Tosca.",
+   "differential_fingerprint": "1.408dddf893f663f0d6a9c987df7d529cfff361ff58b0957faf12214fc56f9c6a",
+   "icons": {
+      "128": "Resources/Image_TricentisLogo_64x64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUsDs0YxyvuYl3BFBPzJjHEvmto0577LPhIcemawoWYLaBqJH+rBeZeP+clI6CsBQRGwPX2SReiVHtUykVQobR5YMRp80S25Bo/l5snX3HKW+d07Kxm/9ldGAKkKKcv7Pe6+PkDaUKnDeOhAHzVNJghwHBo5WSvqhKO1aWGksbe4EMDdyHcXvjUKhK4mJNqMfD6LEEvZy1npX5361pEa6uI+9TGpsSw243j/l0xV4387NPOcQiktcgstsP6yZFH6bdkTDIiAIOofqj337k5vtJcZ15zD/m8r+/PVDGLJttUOkPmx/DYpny9KpvwdbO8XOHTHpA8OqvfJ0dHVDJK0TQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "30.0.0.0",
+   "name": "Tosca Automation Extension for Chrome",
+   "optional_permissions": [ "file:///*" ],
+   "options_page": "Resources/options.html",
+   "permissions": [ "webNavigation", "\u003Call_urls>", "tabs", "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "21.0.0.16",
+   "web_accessible_resources": [ "Resources/ajaxTracer.js", "Resources/wgxpath.install.js", "Resources/sapui5.js", "Resources/shadowDOMUnlocker.js", "Resources/alertAlerter.js" ]
+}

@@ -1,0 +1,16 @@
+2020/12/24-00:59:39.813 4618 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_mycareer.wipro.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/24-01:31:54.273 3194 Level-0 table #5: started
+2020/12/24-01:31:54.319 3194 Level-0 table #5: 3736436 bytes OK
+2020/12/24-01:31:54.320 3194 Delete type=0 #3
+2020/12/24-01:53:15.879 a00 Level-0 table #7: started
+2020/12/24-01:53:15.909 a00 Level-0 table #7: 2173526 bytes OK
+2020/12/24-01:53:15.911 a00 Delete type=0 #4
+2020/12/24-01:53:15.912 a00 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/24-01:53:15.913 a00 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x1f\x00m\x00y\x00C\x00a\x00r\x00e\x00e\x00r\x00D\x00B\x00-\x00u\x00s\x00e\x00r\x00S\x00e\x00s\x00s\x00i\x00o\x00n\x00-\x00m\x00e\x00t\x00a\x00D\x00a\x00t\x00a' @ 10116 : 1
+2020/12/24-01:53:15.913 a00 Compacting 1@1 + 1@2 files
+2020/12/24-01:53:15.937 a00 Generated table #8@1: 44 keys, 9867 bytes
+2020/12/24-01:53:15.937 a00 Compacted 1@1 + 1@2 files => 9867 bytes
+2020/12/24-01:53:15.938 a00 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/24-01:53:15.938 a00 Delete type=2 #5
+2020/12/24-01:53:15.939 a00 Delete type=2 #7
+2020/12/24-01:53:15.941 a00 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x1f\x00m\x00y\x00C\x00a\x00r\x00e\x00e\x00r\x00D\x00B\x00-\x00u\x00s\x00e\x00r\x00S\x00e\x00s\x00s\x00i\x00o\x00n\x00-\x00m\x00e\x00t\x00a\x00D\x00a\x00t\x00a' @ 10116 : 1 .. (end); will stop at (end)

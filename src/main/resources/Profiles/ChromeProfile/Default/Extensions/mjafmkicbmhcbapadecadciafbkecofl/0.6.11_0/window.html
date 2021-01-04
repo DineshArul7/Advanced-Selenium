@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html data-ng-app="untilamApp" data-ng-csp="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Until AM for Chrome</title>
+
+    <script type="text/javascript" src="ga/ga_details.js"></script>
+    <script type="text/javascript" src="ga/embedded_ga_host.js"></script>
+    <link rel="stylesheet" media="all" href="ga/embedded_ga_host.css"></link>
+
+    <link href="styles/songPanel.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/mainMenu.css" rel="stylesheet">
+
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mb.browser.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="lib/hammer.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.hammer.min.js"></script>
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/jdataview.js"></script>
+	<script type="text/javascript" src="lib/splitter.js"></script>
+	<script src="js/__obf.js"></script>  
+
+	<script type="text/javascript" src="js/fileUtil.js"></script>
+	<script type="text/javascript" src="js/WindowController.js"></script>
+	<script type="text/javascript" src="js/mainMenu.js"></script>
+	<script type="text/javascript" src="js/filters.js"></script>
+	<script type="text/javascript" src="js/PlayListModel.js"></script>
+	<script type="text/javascript" src="js/SongModel.js"></script>
+	<script type="text/javascript" src="js/SongParser.js"></script>
+	<script type="text/javascript" src="js/SongsModel.js"></script>
+	<script type="text/javascript" src="js/SongsController.js"></script>
+	<script type="text/javascript" src="js/DeckModel.js"></script>
+	<script type="text/javascript" src="js/FxPadController.js"></script>
+	<script type="text/javascript" src="js/DecksController.js"></script>
+	<script type="text/javascript" src="js/MixerController.js"></script>
+	<script type="text/javascript" src="js/StorageModel.js"></script>
+	<script type="text/javascript" src="js/gdrive/gutil.js"></script>
+	<script type="text/javascript" src="js/gdrive/gdocs.js"></script>
+	<script type="text/javascript" src="js/gdrive/GoogleDriveModel.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/hammerDirectives.js"></script>
+</head>
+<body data-ng-controller="MainController">
+
+	<div class="topLogoWrapper">
+		<div></div>
+	</div>
+
+	<ul id="coolMenu">	
+		<li>
+			<a tabIndex="-1" href="#">About</a>
+			<ul class="noJS">
+				<li><a tabIndex="-1" href="http://until.am" 								target="_blank">Until AM website...</a></li>
+				<li><a tabIndex="-1" href="http://untilam.blogspot.com/" 					target="_blank">Until AM blog...</a></li>
+				<li><a tabIndex="-1" href="http://www.facebook.com/untilam" 				target="_blank">Until AM on Facebook...</a></li>
+				<li><a tabIndex="-1" href="http://twitter.com/until_am" 					target="_blank">Until AM on Twitter...</a></li>
+				<li><a tabIndex="-1" href="http://www.linkedin.com/company/until-am-ltd" 	target="_blank">Until AM on LinkedIn...</a></li>
+			</ul>
+		</li>
+		<li>
+			<a tabIndex="-1" href="#">Help</a>
+			<ul class="noJS">
+				<li><a tabIndex="-1" href="#" data-ng-click="showKbCheatSheet()">Keyboard shortcuts...</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<div class="windowControls" id="windowControls" data-ng-controller="WindowController">
+		<div class="buttonsContainer">
+			<div class="btn windowControlBtn winClose" data-ng-click="closeWindow()"></div>
+			<div class="btn windowControlBtn winMinimize {{ {true:'btnSelected inFullScreen', false:''}[isFullScreen] }}" data-ng-click="minimizeWindow()"></div>
+			<div class="btn windowControlBtn winMaximize {{ {true:'btnSelected inFullScreen', false:''}[isFullScreen] }}" data-ng-click="maximizeWindow()"></div>
+			<div class="btn windowControlBtn winFullScreen {{ {true:'btnSelected inFullScreen', false:''}[isFullScreen] }}" data-ng-click="toggleFullScreen()"></div>
+		</div>
+	</div>
+
+
+	<div class="splitPanel">
+		<div class="decksPanelWrapper">
+
+			<div class="decksBg"><div></div></div>
+
+			<div class="decksPanelFloater"></div>
+
+
+			<div class="decksPanel" data-ng-controller="DecksController">
+								
+				<!-- left deck -->
+				<div class="deckView">
+					<div class="artistNameLabel">{{mainModel.deck0.currentSong.authorName}}</div>	
+					<div class="songNameLabel">{{ {true:'Drag a song onto the deck', false:mainModel.deck0.currentSong.title }[mainModel.deck0.currentSong == null] }}</div>
+
+					<div class="songProgressView">
+						<div class="waveformImage" style="opacity: {{mainModel.deck0.percentageLoaded}}">
+							<div class="waveformImageLoaded" style="width: {{mainModel.deck0.percentageLoaded}}%"></div>
+						</div>
+
+						<div class="waveformImageMask" id="waveformImageMask0"></div>
+
+						<input type="range" class="playHeadSlider" name="playHeadSlider" tabIndex="-1" min="0" max="1" step="0.001"
+							data-ng-model="$parent.playHeadSlider0" 
+							data-ng-change="onPlayHeadSliderChange(0)">
+						</input>
+
+						<div class="songProgressCounter" data-ng-click="onTimeDisplayClick(0)">
+							{{turntableController0.songProgressController.currentTimeStamp}}
+						</div>
+					</div>
+
+					<div class="vinylView" id="vinylView0" droppable>
+						<canvas id="vinylCanvas0" width="262" height="260"></canvas>
+						<canvas id="helperCanvas0" width="250" height="250" style="display:none;"></canvas>
+					
+						<div class="{{ {true:'vinylDeco', false:'vinylDeco vinylDecoEmpty'}[mainModel.deck0.vinylRenderer.hasVinylImage] }}"></div>
+
+						<svg class="vinylHitArea" id="svgelem" height="260" xmlns="http://www.w3.org/2000/svg">
+						    <circle cx="130" cy="130" r="130" fill="red" fill-opacity="0.0"
+							ng-mousedown="turntableController0.onMouseDown($event)" />
+						</svg>
+					</div>
+				
+					<div class="playbackSpeedSliderLabel">{{turntableController0.speed | speedLabelFilter }}</div>
+					<div class="playbackSpeedSlider"></div>
+					<input type="range" class="speedSlider verticalSlider" name="speedSlider" tabIndex="-1" min="-10" max="10" step="0.1" 
+							data-ng-model="turntableController0.speed" data-ng-change="onSpeedChange(0)">
+					</input>
+							
+
+					<div class="playButton {{{true:'btnSelected', false:'btn'}[mainModel.deck0.isPlaying]}}" data-ng-click="togglePlay(0)"></div>
+
+					<div class="deckGainSlider"></div>
+					<input type="range" class="gainSlider verticalSlider" name="gainSlider" tabIndex="-1" min="0" max="1" step="0.01"
+							data-ng-model="$parent.mixerController.gain0" data-ng-change="onGainChange(0)">
+					</input>
+
+					<div class="fxPadArea">
+						<div class="fxPadBg">
+							<div class="fxParameterName fxParameterNameHorizontal">{{fxPadController0.paramXLabel}}</div>
+							<div class="fxParameterName fxParameterNameVertical" id="fxPadVerticalLabel0">
+								<div class="inner">{{fxPadController0.paramYLabel}}</div>
+							</div>
+						</div>
+
+						<div class="fxPad">
+							<div class="fxPadCursorArea" id="fxPadCursorArea0" 
+								ng-mousedown="fxPadController0.onMouseDown($event)">
+								<div class="fxPadCursor" id="fxPadCursor0"></div>
+							</div>
+						</div>
+
+
+						<div class="fxNameLabel">{{fxPadController0.effectNameLabel}}</div>
+
+						<a class="btn btnNextFx" tabIndex="-1" href="#" data-ng-click="nextEffect(0)">
+							<div>NEXT</div>
+						</a>
+
+						<a class="btn btnResetFx" tabIndex="-1" href="#" data-ng-click="resetEffects(0)">
+							<div>RESET</div>
+						</a>
+					</div>
+				</div>
+		
+				<div class="deckView deckViewRight">
+					<div class="artistNameLabel">{{mainModel.deck1.currentSong.authorName}}</div>	
+					<div class="songNameLabel">{{ {true:'Drag a song onto the deck', false:mainModel.deck1.currentSong.title }[mainModel.deck1.currentSong == null] }}
+					</div>
+				
+					<div class="songProgressView">					
+						<div class="waveformImage" style="opacity: {{mainModel.deck1.percentageLoaded}}">
+							<div class="waveformImageLoaded" style="width: {{mainModel.deck1.percentageLoaded}}%"></div>
+						</div>
+
+						<div class="waveformImageMask" id="waveformImageMask1"></div>
+
+						<input type="range" class="playHeadSlider" name="playHeadSlider" tabIndex="-1" min="0" max="1" step="0.001"
+							data-ng-model="$parent.playHeadSlider1" data-ng-change="onPlayHeadSliderChange(1)">
+						</input>
+
+						<div class="songProgressCounter" data-ng-click="onTimeDisplayClick(1)">
+							{{turntableController1.songProgressController.currentTimeStamp}}
+						</div>
+					</div>
+
+					<div class="vinylView" droppable >
+						<canvas id="vinylCanvas1" width="262" height="260"></canvas>
+						<canvas id="helperCanvas1" width="250" height="250" style="display:none;"></canvas>
+						<div class="{{ {true:'vinylDeco', false:'vinylDeco vinylDecoEmpty'}[mainModel.deck1.vinylRenderer.hasVinylImage] }}"></div>
+						<svg class="vinylHitArea" id="svgelem" height="260" xmlns="http://www.w3.org/2000/svg">
+						    <circle id="redcircle" cx="130" cy="130" r="130" fill="red" fill-opacity="0.0"
+							ng-mousedown="turntableController1.onMouseDown($event)" />
+						</svg>
+					</div>
+
+					<div class="playbackSpeedSliderLabel">{{turntableController1.speed | speedLabelFilter }}</div>
+					<div class="playbackSpeedSlider"></div>
+					<input type="range" class="speedSlider verticalSlider" name="speedSlider" tabIndex="-1" min="-10" max="10" step="0.1" 
+							data-ng-model="turntableController1.speed" data-ng-change="onSpeedChange(1)">
+					</input>
+			
+					<div class="playButton {{{true:'btnSelected', false:'btn'}[mainModel.deck1.isPlaying]}}" data-ng-click="togglePlay(1)"></div>
+
+					<div class="deckGainSlider"></div>
+					<input type="range" class="gainSlider verticalSlider" name="gainSlider" tabIndex="-1" min="0" max="1" step="0.01" 
+						data-ng-model="$parent.mixerController.gain1" data-ng-change="onGainChange(1)">
+					</input>
+
+
+					<div class="fxPadArea">
+						<div class="fxPadBg">
+							<div class="fxParameterName fxParameterNameHorizontal">{{fxPadController1.paramXLabel}}</div>
+							<div class="fxParameterName fxParameterNameVertical" id="fxPadVerticalLabel1">
+								<div class="inner">{{fxPadController1.paramYLabel}}</div>
+							</div>
+						</div>
+
+						<div class="fxPad">
+							<div class="fxPadCursorArea" id="fxPadCursorArea1"
+								ng-mousedown="fxPadController1.onMouseDown($event)">
+								<div class="fxPadCursor" id="fxPadCursor1"></div>
+							</div>
+						</div>
+
+						<div class="fxNameLabel">{{fxPadController1.effectNameLabel}}</div>
+
+						<a class="btn btnNextFx" tabIndex="-1" href="#" data-ng-click="nextEffect(1)">
+							<div>NEXT</div>
+						</a>
+
+						<a class="btn btnResetFx" tabIndex="-1" href="#" data-ng-click="resetEffects(1)">
+							<div>RESET</div>
+						</a>
+					</div>
+				</div>
+				<div class="crossFaderView">
+					<input type="range" class="crossFaderSlider" name="crossFaderSlider" tabIndex="-1" min="0" max="1" step="0.01"
+						data-ng-model="$parent.mixerController.crossFader" data-ng-change="onCrossFaderChange()">
+					</input>
+				</div>
+			</div>
+		</div>
+		<div class="songsPanel" data-ng-controller="SongsController">
+			<div class="searchArea">
+				<div class="searchAreaTabs" style="pointer-events:{{ {false:'auto', true:'none'}[songsModel.currentPlayList.state === 1]}};">
+				
+					<div class="{{{0:'tabActive tabSCSelected', 1:'tabPassive tabSC tabShadowLeft', 2:'tabPassive tabSC tabShadowBoth', 3:'tabActive tabSCSelected', 4:'tabActive tabSCSelected'}[songsModel.currentPlayList.type]}}" 
+						 data-ng-click="songsModel.choosePlayList(0)">
+					</div>
+				
+					<div class="{{{0:'tabPassive tabGDrive tabShadowLeft', 1:'tabPassive tabGDrive tabShadowRight', 2:'tabActive tabGDriveSelected', 3:'tabPassive tabGDrive tabShadowLeft', 4:'tabPassive tabGDrive tabShadowLeft'}[songsModel.currentPlayList.type]}}" 
+						 data-ng-click="songsModel.choosePlayList(2)">
+					</div>
+
+					<div class="{{{0:'tabPassive tabLocal tabShadowRight', 1:'tabActive tabLocalSelected', 2:'tabPassive tabLocal tabShadowBoth', 3:'tabPassive tabLocal tabShadowRight', 4:'tabPassive tabLocal tabShadowRight'}[songsModel.currentPlayList.type]}}" 
+						 data-ng-click="songsModel.choosePlayList(1)">
+					</div>
+
+				</div>
+				<div class="tabContents" style="pointer-events:{{ {false:'auto', true:'none'}[songsModel.currentPlayList.state === 1]}};">							
+					<div class="{{{true:'', false:'hidden'}[(songsModel.currentPlayList.type == 0) || (songsModel.currentPlayList.type == 3) || (songsModel.currentPlayList.type == 4)]}}">
+						<form ng-submit="onSearchButtonClick()">
+
+							<div class="searchInputWrapper">
+								<input class="searchInput" type="text" data-ng-model="searchText" size="30" placeholder="Enter keywords" tabIndex="-1">
+							</div>
+
+							<input class="btnSearch btn" type="submit" value="Find" tabIndex="-1">
+						</form>
+
+						<div class="{{ {true: 'btnPreviousPage btn', false:'btnPreviousPage btnSelected'}[previousAllowed] }}"
+								data-ng-click="onPreviousPageButtonClick()"></div>
+						<div class="{{ {true: 'btnNextPage btn', false:'btnNextPage btnSelected'}[nextAllowed] }}"
+								data-ng-click="onNextPageButtonClick()"></div>
+					</div>
+	 				<div class="{{ {true:'', false:'hidden'}[(songsModel.currentPlayList.type == 2)] }}">
+						<div class="btnStretchingWrapper">
+							<div class="btnGDrive btnStretching" data-ng-click="gDriveModel.refreshSongs(true)"><span>{{songsModel.gDrivePL.state | gDriveLabelFilter}}</span></div>
+						</div>
+					</div> 
+
+					<div class="{{ {true:'localFilesArea', false:'hidden'}[(songsModel.currentPlayList.type == 1)] }}">						
+						<div class="btnStretchingWrapper">
+							<div class="browseFileArea btnStretching">
+								<span>Browse local audio files</span>
+							</div>
+						</div>
+						<input type="file" class="browseFile" data-file="param.file" multiple accept=".mp3, .MP3, .wav, .WAV, .ogg, .OGG"></input>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="songsGrid {{{true:'songsGridWithBottomPanel', false:''}[((songsModel.currentPlayList.type == 0) || (songsModel.currentPlayList.type == 3) || (songsModel.currentPlayList.type == 4) )]}}">
+			
+				<div class="searchState">
+					<div>{{songsModel.currentPlayList.state | searchStateFilter : songsModel.currentPlayList.songs.length : songsModel.currentPlayList.type}}
+					</div>
+				</div>	
+
+				<div class="songRowsWrapper">
+					<div data-ng-repeat="song in songsModel.displayedSongs"
+						data-ng-class="getSongRowClass(song.failed, song.isOnDeck, $index)" 
+						data-ng-dblclick="mainModel.autoPlayerModel.routeSong(song)" 
+						data-index="{{$index}}" 
+						draggable>
+
+						<img class="songThumbnail" data-ng-src={{song.imageUrlSmall}}></img>
+						<div class="songDetails">
+							<div class="authorLabel">{{song.authorName}}</div>
+							<div class="titleLabel">{{song.title}}</div>
+							<div class="durationLabel">{{song.duration | msToStampFilter}}</div>
+						</div>
+
+						<div class="songButtonsWrapper">
+							<div class="{{ {true:'songButtonsBgEven', false:'songButtonsBg'}[$index%2==0] }}">
+								<div class="favoriteButton {{ {true:'', false:'hidden'}[song.sourceType == 0] }} {{ {true:'btnSelected', false:'btn'}[song.isFavorited] }}" data-ng-click="toggleFavorite(song)"></div>
+								<a class="btn downloadButton {{ {true:'', false:'hidden'}[song.isDownloadable]}}"
+									href="{{song.mp3DownloadUrl}}" download="song.mp3" target="_blank"></a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="songsListBottomPanel {{{true:'', false:'hidden'}[((songsModel.currentPlayList.type == 0) || (songsModel.currentPlayList.type == 3) || (songsModel.currentPlayList.type == 4) )]}}">
+				<div class="songsListBottomPanelWrapper">
+					<div class="searchResultsButton btn {{ {true:'plButton plButtonSelected', false:'plButton'}[(songsModel.currentPlayList.type == 0)] }}" 
+						data-ng-click="songsModel.choosePlayList(0)"><div class="icon"></div>Search Results</div>
+					<div class="favoritesButton btn {{ {true:'plButton plButtonSelected', false:'plButton'}[(songsModel.currentPlayList.type == 3)] }}" 
+						data-ng-click="songsModel.choosePlayList(3)"><div class="icon"></div>My Favorites</div>
+					<div class="historyButton btn {{ {true:'plButton plButtonSelected', false:'plButton'}[(songsModel.currentPlayList.type == 4)] }}"
+						data-ng-click="songsModel.choosePlayList(4)"><div class="icon"></div>Play History</div>
+				</div>
+			</div>
+		
+		</div>
+
+	</div>
+
+	<div class="keyboardCheatSheet">
+		<div class="popupFloater"></div>
+		<div class="keyboardCheatSheetWrapper">
+			<div class="popupHeader">KEYBOARD SHORTCUTS</div>
+			<div class="btn closePopupBtn" data-ng-click="hideKbCheatSheet()"></div>
+			<div class="keyboardCheatSheetText">
+				Fade to left<br/>
+				Fade to right<br/>
+				Switch to left<br/>
+				Switch to right<br/>
+				Autofade to left, slow<br/>
+				Autofade to right, slow<br/> 
+				Autofade to left, fast<br/>
+				Autofade to right, fast<br/>
+				<br/>
+				Play-Pause left deck<br/>
+				Play-Pause right deck<br/>
+				Play-Pause both decks<br/>
+			</div>
+			<div class="keyboardCheatSheetImages"></div>
+		</div>
+	</div>
+
+    <iframe id="embedded_ga" seamless="seamless" src="ga/embedded_ga_host.html"></iframe>
+	
+</body>
+</html>

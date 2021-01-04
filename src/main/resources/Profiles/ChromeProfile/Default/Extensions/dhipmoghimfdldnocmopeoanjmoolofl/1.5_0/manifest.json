@@ -1,0 +1,24 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "assets/PicMonkey_16.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_title__"
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "assets/PicMonkey_128.png",
+      "16": "assets/PicMonkey_16.png",
+      "48": "assets/PicMonkey_48.png"
+   },
+   "incognito": "split",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDg/lupj6rD/GOKHpYiDsGSug2aMu+lu9bYKLxYwUbn/7l/3yTbWUV+MZ1ynSUmFZPBL0aXFVit7XO7GDBHXsTzG597RuYi75bvXnBZpV5trKD1wrwDkLN9+89XRWLLUuAmhFnyS7gc57Z3ZxqCZ8KPENCMieWofPP9vGPN4PPxqwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "tabs", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5"
+}

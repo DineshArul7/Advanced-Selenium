@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-12-29T12:39:28Z" name="PositiveLogInTestSuite" finished-at="2020-12-29T12:40:07Z" duration-ms="39088">
+    <groups>
+    </groups>
+    <test started-at="2020-12-29T12:39:28Z" name="PositiveLogInTest-WoPR" finished-at="2020-12-29T12:39:41Z" duration-ms="13578">
+      <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@4f6ee6e4]" started-at="2020-12-29T12:39:28Z" name="setUp" finished-at="2020-12-29T12:39:36Z" duration-ms="8295" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.logInTest()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[org.testng.TestRunner@dcc6211]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logInTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@4f6ee6e4]" started-at="2020-12-29T12:39:36Z" name="logInTest" finished-at="2020-12-29T12:39:41Z" duration-ms="4392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@4f6ee6e4]" started-at="2020-12-29T12:39:41Z" name="tearDown" finished-at="2020-12-29T12:39:41Z" duration-ms="604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
+    </test> <!-- PositiveLogInTest-WoPR -->
+    <test started-at="2020-12-29T12:39:41Z" name="PositiveLogInTest-WPr" finished-at="2020-12-29T12:40:07Z" duration-ms="25484">
+      <class name="com.herokuapp.theinternet.loginpagetests.PositiveLoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method, java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3febb011]" started-at="2020-12-29T12:39:41Z" name="setUp" finished-at="2020-12-29T12:39:51Z" duration-ms="9220" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.herokuapp.theinternet.loginpagetests.PositiveLoginTests.logInTest()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ChromeProfile]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[org.testng.TestRunner@47ec7422]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logInTest()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3febb011]" started-at="2020-12-29T12:39:51Z" name="logInTest" finished-at="2020-12-29T12:40:06Z" duration-ms="15696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.herokuapp.theinternet.loginpagetests.PositiveLoginTests@3febb011]" started-at="2020-12-29T12:40:06Z" name="tearDown" finished-at="2020-12-29T12:40:07Z" duration-ms="565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetests.PositiveLoginTests -->
+    </test> <!-- PositiveLogInTest-WPr -->
+  </suite> <!-- PositiveLogInTestSuite -->
+</testng-results>

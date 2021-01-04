@@ -1,0 +1,22 @@
+{
+   "description": {
+      "description": "Extension description in manifest.",
+      "message": "Instantly edit web page images and screenshots with PicMonkey"
+   },
+   "edit_image": {
+      "description": "User visible tooltip on images.",
+      "message": "Edit image in PicMonkey"
+   },
+   "edit_screenshot": {
+      "description": "User visible tooltip on the screenshot.",
+      "message": "Edit screenshot in PicMonkey"
+   },
+   "name": {
+      "description": "Extension name in manifest.",
+      "message": "PicMonkey Extension"
+   },
+   "title": {
+      "description": "Extension browser action tooltip text in manifest.",
+      "message": "PicMonkey"
+   }
+}

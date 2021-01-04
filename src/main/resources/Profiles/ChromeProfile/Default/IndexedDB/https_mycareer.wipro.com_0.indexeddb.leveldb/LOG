@@ -1,0 +1,25 @@
+2020/12/24-22:18:27.651 1558 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_mycareer.wipro.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/24-22:18:27.652 1558 Recovering log #6
+2020/12/24-22:18:27.652 1558 Reusing old log C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_mycareer.wipro.com_0.indexeddb.leveldb/000006.log 
+2020/12/24-22:32:09.414 34dc Level-0 table #11: started
+2020/12/24-22:32:09.449 34dc Level-0 table #11: 3758135 bytes OK
+2020/12/24-22:32:09.450 34dc Delete type=0 #6
+2020/12/24-23:17:34.299 3b00 Level-0 table #13: started
+2020/12/24-23:17:34.303 3b00 Level-0 table #13: 90217 bytes OK
+2020/12/24-23:17:34.305 3b00 Delete type=0 #10
+2020/12/24-23:17:34.306 3b00 Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x1f\x00m\x00y\x00C\x00a\x00r\x00e\x00e\x00r\x00D\x00B\x00-\x00u\x00s\x00e\x00r\x00S\x00e\x00s\x00s\x00i\x00o\x00n\x00-\x00m\x00e\x00t\x00a\x00D\x00a\x00t\x00a' @ 23746 : 1
+2020/12/24-23:17:34.307 3b00 Compacting 1@0 + 1@1 files
+2020/12/24-23:17:34.330 3b00 Generated table #14@0: 3060 keys, 40902 bytes
+2020/12/24-23:17:34.330 3b00 Compacted 1@0 + 1@1 files => 40902 bytes
+2020/12/24-23:17:34.331 3b00 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/24-23:17:34.332 3b00 Delete type=2 #11
+2020/12/24-23:17:34.332 3b00 Delete type=2 #13
+2020/12/24-23:17:34.335 3b00 Manual compaction at level-0 from '\x00\x01\x01\x02\x01\x1f\x00m\x00y\x00C\x00a\x00r\x00e\x00e\x00r\x00D\x00B\x00-\x00u\x00s\x00e\x00r\x00S\x00e\x00s\x00s\x00i\x00o\x00n\x00-\x00m\x00e\x00t\x00a\x00D\x00a\x00t\x00a' @ 23746 : 1 .. (end); will stop at (end)
+2020/12/24-23:17:34.335 3b00 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x02\x03\x01\x03\x00k\x00e\x00y' @ 16008 : 1
+2020/12/24-23:17:34.335 3b00 Compacting 1@1 + 1@2 files
+2020/12/24-23:17:34.339 3b00 Generated table #15@1: 44 keys, 16132 bytes
+2020/12/24-23:17:34.340 3b00 Compacted 1@1 + 1@2 files => 16132 bytes
+2020/12/24-23:17:34.340 3b00 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/24-23:17:34.341 3b00 Delete type=2 #8
+2020/12/24-23:17:34.341 3b00 Delete type=2 #14
+2020/12/24-23:17:34.342 3b00 Manual compaction at level-1 from '\x00\x01\x02\x03\x01\x03\x00k\x00e\x00y' @ 16008 : 1 .. (end); will stop at (end)

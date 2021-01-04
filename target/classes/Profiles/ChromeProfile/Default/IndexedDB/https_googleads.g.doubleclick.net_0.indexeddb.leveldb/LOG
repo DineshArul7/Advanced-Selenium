@@ -1,0 +1,8 @@
+2020/12/29-15:10:32.321 21b8 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_googleads.g.doubleclick.net_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/29-15:10:32.322 21b8 Recovering log #7
+2020/12/29-15:10:32.323 21b8 Reusing old log C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_googleads.g.doubleclick.net_0.indexeddb.leveldb/000007.log 
+2020/12/29-15:10:41.246 21b8 Level-0 table #11: started
+2020/12/29-15:10:41.246 21b8 Level-0 table #11: 0 bytes OK
+2020/12/29-15:10:41.257 21b8 Delete type=0 #7
+2020/12/29-15:10:41.257 21b8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/29-15:10:41.258 21b8 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "./js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/static/32.png",
+      "default_popup": "./popup.html",
+      "default_title": "__MSG_title__"
+   },
+   "content_scripts": [ {
+      "js": [ "js/content.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "assets/static/128.png",
+      "32": "assets/static/32.png",
+      "64": "assets/static/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo/KJSLHGQHoOvdt6LiX5lyNK7zUxPfuE1oMM577VEZE21i2siI/vTTXrMa8jEgwX2aS562bkAO8WjzoLkPBHL1aYUIEJve0AD4Tg5UWy4rABzd3grkxuhDrzlOxuC6zIP+SUuT3esU19spuVPB3KnmRfUW8Reo4nazitijTCCx0JpVkPkm6eG/aCYjQthqK2iuTKaHdFYvgjtN7WJDZHnqkLewPADvAJ+fFb0lpVtujRssMm5o25c+emJ9RyKqB9E9UVRntim0f2gIy/CBjGXdpPVX3zwWzbZFZQsgY/sCojlrAPGd5WkOPWGl+42e728kXeSyaJZClrzQx/cfjWuwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "webRequest", "webRequestBlocking", "*://*/*", "proxy", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2",
+   "web_accessible_resources": [ "static/*", "assets/*.svg", "assets/*.png", "assets/*.css", "assets/*.otf" ]
+}

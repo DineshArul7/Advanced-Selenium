@@ -1,0 +1,110 @@
+body {
+/*	margin-top: 50px;
+*/	
+/*	font-family: Arial;*/
+}
+h2 { font-size: 20px; color: #F00; padding: .5em 0;}
+h3 { font-size: 14px; }
+
+
+/* Structure
+------------------------------------------*/
+#coolMenu,
+#coolMenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#coolMenu {
+	display: block;
+	height: 37px;
+	
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+	
+	border-bottom: 1px solid #3B3B3B;
+}
+
+#coolMenu > li {
+	display: block;
+	float: left;
+	width: 70px;
+	margin-top: 0px;
+}
+#coolMenu li a {
+	display: block;
+/*	height: 2em;
+*/	height: 33px;
+	line-height: 28px;
+	padding: 0 1.5em;
+	padding-top: 3px;
+	
+	text-decoration: none;
+}
+#coolMenu ul {
+	position: absolute;
+	display: none;
+	z-index: 999;
+}
+#coolMenu ul li a {
+	width: 130px;
+}
+#coolMenu li:hover ul.noJS {
+	display: block; 
+}
+
+
+/* Main menu
+------------------------------------------*/
+#coolMenu {
+	font-family: Arial;
+	font-size: 12px;
+	background: url("../img/default/_tmp_bg_tile2.png") 0px 0px / 21px 21px, -webkit-linear-gradient(bottom, #000000 0%, #000000 4%, #343434 100%) 0 0 / 100% 100%;
+}
+#coolMenu > li > a {
+	color: #AAAAAA;
+}
+#coolMenu > li:hover > a {
+
+	background-color: rgba(255,255,255,0.05);
+	
+/*	background: #252525;*/
+	color: #CCCCCC;
+}
+
+#coolMenu a:focus {
+	outline: 0;
+}
+
+
+/* Submenu
+------------------------------------------*/
+#coolMenu ul {
+	background: #252525;
+}
+#coolMenu ul li a {
+	color: #AAAAAA;
+}
+#coolMenu ul li:hover a {
+/*	background: #ffc97c;
+*/	
+	background: #2A2A2A;
+	color: #CCCCCC;
+}
+
+
+/************************************
+* HI-RES IMAGE DEFINITIONS 
+************************************/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (                min-resolution: 1.5dppx)
+/*only screen and (-webkit-min-device-pixel-ratio: 0.9),
+only screen and (                min-resolution: 0.9dppx) */
+{  
+	#coolMenu {
+		background: url("../img/2x/_tmp_bg_tile2.png") 0px 0px / 21px 21px, -webkit-linear-gradient(bottom, #000000 0%, #000000 4%, #343434 100%) 0 0 / 100% 100%;
+	}
+}

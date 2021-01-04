@@ -1,0 +1,5 @@
+2020/12/24-23:37:44.023 4c44 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_2a6b2c8674ba14d7720546559d79700e.safeframe.googlesyndication.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/24-23:38:16.765 4c44 Level-0 table #5: started
+2020/12/24-23:38:16.768 4c44 Level-0 table #5: 460 bytes OK
+2020/12/24-23:38:16.770 4c44 Delete type=0 #3
+2020/12/24-23:38:16.770 4c44 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

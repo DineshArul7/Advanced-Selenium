@@ -1,0 +1,9 @@
+2020/12/29-10:38:15.593 1c24 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB/MANIFEST-000001
+2020/12/29-10:38:15.594 1c24 Recovering log #1078
+2020/12/29-10:38:15.597 1c24 Reusing old log C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB/001078.log 
+2020/12/29-10:38:34.561 1c24 Level-0 table #1082: started
+2020/12/29-10:38:34.564 1c24 Level-0 table #1082: 81889 bytes OK
+2020/12/29-10:38:34.564 1c24 Delete type=0 #1078
+2020/12/29-12:28:39.490 19f0 Level-0 table #1084: started
+2020/12/29-12:28:39.497 19f0 Level-0 table #1084: 84390 bytes OK
+2020/12/29-12:28:39.499 19f0 Delete type=0 #1081

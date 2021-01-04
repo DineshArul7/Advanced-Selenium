@@ -1,0 +1,853 @@
+/* GENERAL PURPOSE */
+
+html {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	
+	font-family: "Helvetica", sans-serif;
+	color: #AAAAAA;
+	background-color: #222222;
+
+	border: 1px solid #000000;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* SPLIT PANEL */
+.splitPanel {
+	height: 100%;
+	width: 100%;
+
+	display:block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.splitter-bar {
+	width: 6px;
+	background: #F00;
+	opacity: 0;
+	margin-left: 3px;
+	cursor: col-resize;
+}
+
+/* DECKS */
+
+.topLogoWrapper
+{
+/*	padding-right: 382px;*/
+	padding-top: 3px;
+
+	position: relative;
+	width: 100%;
+	height: 50px;
+	clear: none;
+	float: left;
+	display:block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 1500;
+	pointer-events: none;
+}
+.topLogoWrapper div
+{
+	position: relative;
+	width: 250px;
+	height: 30px;
+	display: block;
+	clear: left;
+	margin: auto;	
+	background-image: url("../img/default/logo01.png");
+	background-repeat: no-repeat;
+	background-size:163px 24px;
+	background-position: center;	
+}
+
+.decksPanelWrapper {
+	position: absolute;
+
+	height: 100%;
+	width: 100%;
+	clear: none;
+	float: left;
+	display:block;
+	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.decksBg {
+	width: 105%; /* over 100 to trick the splitter into displaying the bg on the draggable area */
+	height: 100%;
+	position: absolute;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.decksBg div {
+	width: 100%;
+	height: 100%;
+	background: url("../img/default/_tmp_bg_tile2.png") 0px 0px / 21px 21px, -webkit-radial-gradient(circle, #343434, #000000) 0 0 / 100% 100%;
+}
+
+
+/* helper for positioning the decks view vertically */
+.decksPanelFloater
+{
+	float: left;
+	height: 50%;
+	width: 100%;
+	margin-bottom: -293px;
+}
+
+.decksPanel {
+
+	display: block;
+	clear: left;
+
+	margin: auto;
+	vertical-align: center;
+	
+	width: 918px;
+	height: 620px;
+
+	position: relative;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.deckView {
+	width: 451px;
+	height: 620px;
+	position: absolute;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.deckViewRight {
+	right: 0px;
+}
+
+
+/* DECK TOP PART */
+
+.artistNameLabel {
+	font-size: 14px;
+	color: #FFFFFF;
+	height: 17px;
+	overflow: hidden;
+}
+
+.songNameLabel {
+	font-size: 14px;
+	height: 17px;
+	overflow: hidden;
+}
+
+.deckViewRight .artistNameLabel,
+.deckViewRight .songNameLabel{
+	text-align: right;
+}
+
+
+.songProgressView {
+	width: 451px;
+	height: 69px;
+	position: absolute;
+	top: 40px;	
+	background-image: url("../img/default/waveFormArea.png");
+	background-size: 451px 69px;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+}
+
+.deckViewRight .songProgressView {
+	padding-left: 96px;
+}
+
+.waveformImage, 
+.waveformImageMask
+{
+	position: absolute;
+	width: 333px; 
+	height: 64px;
+	top: 3px;
+	left: 12px;	
+}
+.deckViewRight .waveformImage, 
+.deckViewRight .waveformImageMask {
+	left: 108px;	
+}
+
+.waveformImage
+{
+	background-color: rgba(0,204,255,0.2);
+	pointer-events:none;
+}
+.waveformImageLoaded {
+	background-color: rgba(0,204,255,0.3);
+	opacity:0.4;
+	width: 0%;
+	height: 100%;
+}
+
+.waveformImageMask {
+	background-image: url("../img/default/waveFormArea.png");
+	background-size: 451px 69px;
+	background-repeat: no-repeat;
+	background-position: -12px -2px;
+	pointer-events:none;
+}
+
+
+input[type='range'].playHeadSlider {
+	position: absolute;
+	width: 333px; 
+	height: 64px;
+	-webkit-appearance: none; 
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.deckViewRight input[type='range'].playHeadSlider {
+	left: 106px;
+}
+
+
+input[type='range'].playHeadSlider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 3px; 
+	height: 63px;
+	background-image: url("../img/default/playhead.png");	
+	background-size: 3px 64px;
+}
+
+
+.songProgressCounter {
+	position: absolute;
+	width: 90px;
+	left: 348px;
+	top: 16px;
+	color: #FFFFFF;
+	font-size: 30px;
+	text-align: right;
+	cursor: pointer;
+}
+.deckViewRight .songProgressCounter {
+	left: 10px;
+	text-align: left;
+}
+
+
+/* DECK MIDDLE PART */
+
+.playbackSpeedSlider {
+	width: 67px;
+	height: 266px;
+	position: absolute;
+	top: 137px;
+	background-image: url("../img/default/sliderTrackSpeed.png");
+	background-size: 67px 266px;	
+	background-repeat: no-repeat;
+}
+
+.deckViewRight .playbackSpeedSlider {
+	left: 384px;
+}
+
+.playbackSpeedSliderLabel
+{
+	position: absolute;
+	top:120px;
+	width: 67px;
+	text-align: center;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+.deckViewRight .playbackSpeedSliderLabel
+{
+	left: 384px;
+}
+
+input[type='range'].speedSlider {
+	top: 234px;
+	left: -94px;
+	width: 251px; 
+}
+.deckViewRight input[type='range'].speedSlider {
+	left: 290px;
+}
+
+input[type='range'].verticalSlider {
+	position: absolute;
+	height: 67px;
+	-webkit-appearance: none;
+	-webkit-transform: rotate(90deg);
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input[type='range'].verticalSlider::-webkit-slider-thumb {
+	width: 19px; 
+	height: 46px;
+	background-image: url("../img/default/sliderThumbVertical.png");
+	background-size: 19px 138px;
+}
+
+.deckGainSlider {	
+	width: 67px;
+	height: 147px;
+	background-image: url("../img/default/sliderTrackVolume.png");
+	background-size: 67px 147px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 193px;
+	left: 384px;
+}
+
+.deckViewRight .deckGainSlider {
+	left: 0px;
+}
+
+input[type='range'].gainSlider {
+	top: 231px;
+	left: 353px;
+	width: 125px; 
+}
+.deckViewRight input[type='range'].gainSlider {
+	left: -31px;
+}
+
+.vinylView {
+	width: 280px;
+	height: 280px;
+	padding-top: 20px;
+	padding-left: 20px;
+
+	position: absolute;
+	left: 60px;
+	top: 125px;
+	overflow: visible;
+}
+
+.vinylHover
+{
+	background-image: url("../img/default/vinylHiliteAccept.png");
+	background-size: 280px 280px;
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	overflow: visible;
+}
+
+.vinylDeco {
+	width: 262px;
+	height: 260px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background-image: url("../img/default/vinylDecoSong02.png");
+	background-size: 262px 260px;
+	background-repeat: no-repeat;
+}
+.vinylDecoEmpty {
+	background-image: url("../img/default/vinylDecoDrag02.png");
+	background-size: 262px 260px;
+	background-repeat: no-repeat;
+}
+
+.vinylHitArea
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.vinylHitArea circle
+{
+	cursor: pointer;
+}
+
+.deckViewRight .vinylView {
+	left: 88px;
+}
+
+
+.playButton {
+	position: absolute;
+	top: 347px;
+	left: 324px;
+
+	width: 56px;
+	height: 55px;
+	background-image: url("../img/default/btnPlay.png");
+	background-size: 112px 165px;
+	background-repeat: no-repeat;
+}
+
+
+.deckViewRight .playButton {
+	left: 71px;
+}
+
+/* DECK BOTTOM PART (FX PAD) */
+
+.fxPadArea
+{
+	position: absolute;
+	top: 418px;		
+}
+
+.deckViewRight .fxPadArea
+{
+	right: 0px;
+}
+
+.fxPadBg {
+	width: 353px;
+	height: 161px;
+	background-image: url("../img/default/fxPadArea.png");
+	background-size: 353px 161px;
+	background-repeat: no-repeat;
+}
+
+.fxPadCursorArea
+{
+	position: absolute;
+	top: 2px;
+	width: 351px;
+	height: 154px;
+	overflow: hidden;
+}
+
+.fxPadCursor
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 24px;
+	height: 24px;	
+	background-image: url("../img/default/fxPadCursor.png");
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	pointer-events:none;
+}
+
+.fxParameterName {
+	position: absolute;
+	font-size: 11px;
+	color: #444444;
+	letter-spacing: 4px;
+}
+.fxParameterNameHorizontal {
+	top: 140px;	
+	width: 100%;
+	text-align: center;
+}
+.fxParameterNameVertical {
+	width: 15px;
+	right: 0px;
+	top: 14px;	
+}
+ 
+.fxNameLabel {
+	position: absolute;
+	top: 168px;	
+	left: 3px;
+	font-size: 12px;
+	color: #FFFFFF;
+	letter-spacing: 4px;
+}
+
+.btnNextFx, 
+.btnResetFx {
+	width: 61px;
+	height: 23px;
+	background-image: url("../img/default/fxPadBtn.png");
+	background-size: 61px 69px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 163px;
+
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	font-size: 11px;
+}
+.btnNextFx {
+	left: 225px;
+}
+.btnResetFx {
+	left: 292px;
+}
+.btnNextFx div,
+.btnResetFx div {
+	padding-top: 5px;
+}
+
+/* CROSS FADER */
+
+.crossFaderView
+{
+	width: 148px;
+	height: 69px;
+	position: absolute;
+	top: 510px;
+	left: 385px;
+	padding-top: 10px;
+	background-image: url("../img/default/sliderTrackMix.png");
+	background-size: 148px 69px;
+	background-repeat: no-repeat;
+}
+
+input[type='range'].crossFaderSlider {
+	width: 143px; 
+	height: 46px;
+	-webkit-appearance: none; 
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input[type='range'].crossFaderSlider::-webkit-slider-thumb {
+	width: 19px; 
+	height: 46px;
+	background-image: url("../img/default/sliderThumbHorizontal.png");
+	background-size: 19px 138px;
+}
+
+input[type='range']:focus {
+	outline: 0;
+}
+
+
+/* POPUPS */
+
+.keyboardCheatSheet {
+	visibility: hidden;
+	background-color:rgba(0,0,0,0.85);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 2000;
+}
+
+.popupFloater
+{
+	float: left;
+	height: 50%;
+	width: 100%;
+	margin-bottom: -250px;
+	z-index: 100;
+}
+.keyboardCheatSheetWrapper
+{
+	display: block;
+	clear: left;
+	margin: auto;
+	vertical-align: center;	
+	position: relative;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+
+	width: 500px;
+	height: 500px;
+	margin: auto;
+}
+
+
+.popupHeader {
+	width: 450px;
+	height: 36px;
+	color: #166E84;	
+	font-weight: bold;
+	font-size: 26px;
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+	padding-top: 2px;
+}
+.closePopupBtn {
+	width: 36px;
+	height: 36px;
+	display: block;
+	float: right;
+	background-image: url("../img/default/btnPopUpClose.png");
+	background-size: 36px 108px;
+}
+.keyboardCheatSheetText {
+	clear: both;
+	color: #808080;	
+	font-size: 14px;
+
+	line-height: 30px;
+	width: 192px;
+	height: 354px;
+	display: block;
+	float: left;
+}
+.keyboardCheatSheetImages {
+	width: 125px;
+	height: 354px;
+	background-image: url("../img/default/kbCheatSheet.png");	
+	background-size: 125px 354px;
+	display: block;
+	float: left;
+	margin-top: 4px;
+}
+
+/* WINDOW CONTROLS */
+
+.windowControls
+{
+	width: 200px;
+	height: 34px;
+	position: absolute;
+	width: 100%;
+	z-index: 1200;
+	margin-left: 145px;
+	padding-top: 2px;
+	margin-right: 200px;
+
+	-webkit-app-region: drag;
+}
+.windowControls .buttonsContainer
+{
+	-webkit-app-region: no-drag;
+	padding-right: 151px;
+}
+.windowControlBtn
+{
+	-webkit-app-region: no-drag;
+
+	display: block;
+	float: right;
+	margin-right: 7px;
+	margin-top: 9px;
+
+	width: 15px;
+	height: 15px;
+	
+/*	
+	background: url("../img/default/btnWinMinimize.png") no-repeat;
+	background: url("../img/default/btnDownLoad.png") no-repeat;*/
+}
+
+.inFullScreen
+{
+	color: #FF0000;
+}
+
+.winMinimize { 	
+	background-image: url("../img/default/btnWinMinimize.png"); 
+	background-size: 30px 45px;
+}
+.winMaximize { 	
+	background-image: url("../img/default/btnWinMaximize.png"); 
+	background-size: 30px 45px;
+}
+.winClose {
+	background-image: url("../img/default/btnWinClose.png"); 
+	background-size: 15px 45px;
+}
+.winFullScreen { 
+	background-image: url("../img/default/btnWinFullScreen.png"); 
+	background-size: 30px 45px;
+}
+
+
+/* GENERAL PURPOSE */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2); 
+    border-radius: 8px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.7); 
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+	background-position: center;
+}
+
+input[type='range']::-webkit-slider-thumb:active {
+	background-position: bottom;
+}
+
+.btn {
+	background-repeat: no-repeat;
+	background-position: top left;
+	cursor: pointer;
+	border: none;
+	font-size: 11px;
+}
+
+.btn:hover {
+	background-position: center left;
+}
+
+.btn:active {
+	background-position: bottom left;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btnSelected {
+	background-repeat: no-repeat;
+	background-position: right top;
+	cursor: pointer;
+}
+
+.btnSelected:hover {
+	background-position: right center;
+}
+
+.btnSelected:active {
+	background-position: right bottom;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+
+/************************************
+* HI-RES IMAGE DEFINITIONS 
+************************************/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (                min-resolution: 1.5dppx)
+/*only screen and (-webkit-min-device-pixel-ratio: 0.9),
+only screen and (                min-resolution: 0.9dppx) */
+{  
+	.decksBg div {
+		background: url("../img/2x/_tmp_bg_tile2.png") 0px 0px / 21px 21px, -webkit-radial-gradient(circle, #343434, #000000) 0 0 / 100% 100%; }
+	.topLogoWrapper div {
+		background-image: url("../img/2x/logo01.png");
+	}
+	.songProgressView {	
+		background-image: url("../img/2x/waveFormArea.png");
+	}
+	.waveformImageMask {
+		background-image: url("../img/2x/waveFormArea.png");
+	}
+	input[type='range'].playHeadSlider::-webkit-slider-thumb {
+		background-image: url("../img/2x/playhead.png");	
+	}
+	.playbackSpeedSlider {
+		background-image: url("../img/2x/sliderTrackSpeed.png");
+	}
+	input[type='range'].verticalSlider::-webkit-slider-thumb {
+		background-image: url("../img/2x/sliderThumbVertical.png");
+	}
+	.deckGainSlider {	
+		background-image: url("../img/2x/sliderTrackVolume.png");
+	}
+	.vinylHover
+	{
+		background-image: url("../img/2x/vinylHiliteAccept.png");
+	}
+	.vinylDeco {
+		background-image: url("../img/2x/vinylDecoSong02.png");
+	}
+	.vinylDecoEmpty {
+		background-image: url("../img/2x/vinylDecoDrag02.png");
+	}
+	.playButton {
+		background-image: url("../img/2x/btnPlay.png");
+	}
+	.fxPadBg {
+		background-image: url("../img/2x/fxPadArea.png");
+	}
+	.fxPadCursor
+	{
+		background-image: url("../img/2x/fxPadCursor.png");
+	}
+	.btnNextFx, 
+	.btnResetFx {
+		background-image: url("../img/2x/fxPadBtn.png");
+	}
+	.crossFaderView
+	{
+		background-image: url("../img/2x/sliderTrackMix.png");
+	}
+	input[type='range'].crossFaderSlider::-webkit-slider-thumb {
+		background-image: url("../img/2x/sliderThumbHorizontal.png");
+	}
+	.closePopupBtn {
+		background-image: url("../img/2x/btnPopUpClose.png");
+	}
+	.keyboardCheatSheetImages {
+		background-image: url("../img/2x/kbCheatSheet.png");	
+	}
+	.winMinimize 		{ 	background-image: url("../img/2x/btnWinMinimize.png"); }
+	.winMaximize 		{ 	background-image: url("../img/2x/btnWinMaximize.png"); }
+	.winClose 			{ 	background-image: url("../img/2x/btnWinClose.png"); }
+	.winFullScreen 	{ 	background-image: url("../img/2x/btnWinFullScreen.png"); }
+}
+
+
+/*
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx)
+*/

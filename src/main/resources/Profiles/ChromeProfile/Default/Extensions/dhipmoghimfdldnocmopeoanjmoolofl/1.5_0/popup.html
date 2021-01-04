@@ -1,0 +1,73 @@
+<html>
+<head>
+<script type='text/javascript' src='popup.js'></script>
+
+<style type="text/css">
+body {
+    font-family:  "Trebuchet MS", "Lucida Grande", Verdana, sans-serif;
+    background-color: #FFFFFF;
+    font-size: 12px;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.selectableItem:hover {
+    background-color: #d1e9ed;
+    cursor: pointer;
+}
+
+#thumbHolder {
+    box-sizing: border-box;
+    margin: 0;
+    width: 168px;
+    border: 0;
+    height: 100%;
+}
+
+#thumbHolder:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.thumbnailItem {
+    box-sizing: border-box;
+    float: left;
+    width: 56px;
+    height: 56px;
+}
+
+.thumbnailItem img{
+    position: relative;
+}
+
+.screenshotItem {
+    box-sizing: border-box;
+    float: left;
+    width: 168px;
+    height: 100px;
+}
+
+.screenshotItem img{
+    position: relative;
+}
+
+hr {
+    border: 1px dashed #e5e5e5;
+    margin: 0;
+}
+
+</style>
+</head>
+
+<body>
+    <div id="thumbHolder">
+        <div id="screenshotHolder" class='screenshotItem selectableItem'>
+        </div>
+        <hr/>
+    </div>
+</body>
+</html>

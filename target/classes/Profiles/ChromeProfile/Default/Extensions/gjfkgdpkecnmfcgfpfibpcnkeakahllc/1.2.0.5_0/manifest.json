@@ -1,0 +1,18 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "https://planner5d.com/app-chrome/"
+      },
+      "urls": [ "https://planner5d.com/" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyH/8hj3/xSzMTh3Oqdkc02p20f3Lfs3VRCpdxhBx1dJsgqe0BzDlhJ6fmA2tIermdMGPsk5cBTTn6lLoGaZNDOiySKI3Eg8TkOlt8QvV6MQVPivrZw+RTIR0lj1Vzo2OYt6jhyTZjPsBxYRJ1TDO1N8OaZrAJb301jsdLokw8qQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_appName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.0.5"
+}

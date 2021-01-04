@@ -1,0 +1,32 @@
+{
+   "description": "",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjtdCfIBrgSSMYgxWWGZd4R2BJ8Cea0V4004xJNgbwsZF/oxvUbW2qKSWBIdBKoavzq1ArW2OCEl/DS7F4K85eei/YIICA28Ml5+aNdNkPXM2lSax9KWBsnlIzobmlWvMNl4hja20WKK7yCiqnjJ3Y2cOR4b6OjylDq7RTlcM3hq9SVb7w3urkcca2akXabWRVayDoKo8EVr0asyBYbjXJAVD3KAx+BZT7DG1LQW5Xug4VOC4f2O5yIRdEV8vHkgDjheCKRP9TvLXSzGB5dx0oprrqHl55jXd0qzwe/jeP0havarXYMmjErAhTXFXk2cODosDXtS9kxpeiKa6bE841wIDAQAB",
+   "manifest_version": 2,
+   "name": "Simple Black",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "button_background": [ 0, 0, 0, 0 ],
+         "frame": [ 0, 0, 0 ],
+         "ntp_background": [ 0, 0, 0 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 255, 255, 255 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 0, 0, 0 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 1 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1"
+}

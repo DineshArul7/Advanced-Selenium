@@ -1,0 +1,27 @@
+2020/12/29-10:38:15.739 5258 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Local Storage\leveldb/MANIFEST-000001
+2020/12/29-10:38:15.741 5258 Recovering log #108
+2020/12/29-10:38:15.742 5258 Reusing old log C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Local Storage\leveldb/000108.log 
+2020/12/29-10:43:01.582 5334 Level-0 table #112: started
+2020/12/29-10:43:01.592 5334 Level-0 table #112: 11126 bytes OK
+2020/12/29-10:43:01.595 5334 Delete type=0 #108
+2020/12/29-12:08:40.990 3a6c Level-0 table #114: started
+2020/12/29-12:08:40.995 3a6c Level-0 table #114: 12987 bytes OK
+2020/12/29-12:08:40.999 3a6c Delete type=0 #111
+2020/12/29-12:08:41.001 3a6c Compacting 4@0 + 1@1 files
+2020/12/29-12:08:41.009 3a6c Generated table #115@0: 250 keys, 48140 bytes
+2020/12/29-12:08:41.009 3a6c Compacted 4@0 + 1@1 files => 48140 bytes
+2020/12/29-12:08:41.010 3a6c compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/29-12:08:41.012 3a6c Delete type=2 #104
+2020/12/29-12:08:41.013 3a6c Delete type=2 #107
+2020/12/29-12:08:41.013 3a6c Delete type=2 #109
+2020/12/29-12:08:41.013 3a6c Delete type=2 #112
+2020/12/29-12:08:41.014 3a6c Delete type=2 #114
+2020/12/29-12:29:05.060 3a78 Level-0 table #117: started
+2020/12/29-12:29:05.071 3a78 Level-0 table #117: 13870 bytes OK
+2020/12/29-12:29:05.074 3a78 Delete type=0 #113
+2020/12/29-12:50:54.255 2940 Level-0 table #119: started
+2020/12/29-12:50:54.266 2940 Level-0 table #119: 12974 bytes OK
+2020/12/29-12:50:54.269 2940 Delete type=0 #116
+2020/12/29-13:29:33.690 4d94 Level-0 table #121: started
+2020/12/29-13:29:33.701 4d94 Level-0 table #121: 9650 bytes OK
+2020/12/29-13:29:33.705 4d94 Delete type=0 #118

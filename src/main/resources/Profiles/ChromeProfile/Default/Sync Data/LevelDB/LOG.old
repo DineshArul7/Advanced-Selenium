@@ -1,0 +1,15 @@
+2020/12/29-14:24:51.662 55a4 Reusing MANIFEST C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB/MANIFEST-000001
+2020/12/29-14:24:51.663 55a4 Recovering log #1083
+2020/12/29-14:24:51.665 55a4 Reusing old log C:\Users\Dinesh Arul\AppData\Local\Google\Chrome\User Data\Default\Sync Data\LevelDB/001083.log 
+2020/12/29-16:24:20.499 3790 Level-0 table #1087: started
+2020/12/29-16:24:20.504 3790 Level-0 table #1087: 95438 bytes OK
+2020/12/29-16:24:20.505 3790 Delete type=0 #1083
+2020/12/29-16:24:20.505 5300 Compacting 4@0 + 1@1 files
+2020/12/29-16:24:20.510 5300 Generated table #1088@0: 646 keys, 35245 bytes
+2020/12/29-16:24:20.510 5300 Compacted 4@0 + 1@1 files => 35245 bytes
+2020/12/29-16:24:20.511 5300 compacted to: files[ 0 1 1 0 0 0 0 ]
+2020/12/29-16:24:20.511 5300 Delete type=2 #1076
+2020/12/29-16:24:20.511 5300 Delete type=2 #1079
+2020/12/29-16:24:20.511 5300 Delete type=2 #1082
+2020/12/29-16:24:20.512 5300 Delete type=2 #1084
+2020/12/29-16:24:20.512 5300 Delete type=2 #1087

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [CheckboxestestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="4" parallel="tests" name="CheckboxTest(failed)">
+    <classes>
+      <class name="com.herokuapp.theinternet.checkboxpagetests.CheckBoxesTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="selectingTwoCheckboxesTest"/>
+        </methods>
+      </class> <!-- com.herokuapp.theinternet.checkboxpagetests.CheckBoxesTest -->
+    </classes>
+  </test> <!-- CheckboxTest(failed) -->
+</suite> <!-- Failed suite [CheckboxestestSuite] -->

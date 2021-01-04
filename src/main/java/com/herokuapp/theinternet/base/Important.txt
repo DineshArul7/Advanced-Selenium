@@ -1,0 +1,5 @@
+Stale Exception 
+
+while using page factory we need to init all the elements in a page
+at that time some elements may not be loaded since its dependent on some other click 
+At that time this stale exceptions occurs.
